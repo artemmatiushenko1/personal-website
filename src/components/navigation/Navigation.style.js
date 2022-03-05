@@ -12,6 +12,7 @@ export const ActionBar = styled.div`
   left: 50%;
   transform: translateX(-50%);
   top: 0;
+  z-index: 100;
 `;
 
 export const Nav = styled.nav`

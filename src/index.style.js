@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
       height: 100%;
       box-sizing: border-box;
       -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
     }
 
     body {

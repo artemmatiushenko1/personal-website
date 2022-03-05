@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import heroBackground from 'assets/images/hero-background.png';
 
 export const IntroBox = styled.div`
   display: flex;
@@ -30,4 +31,20 @@ export const Description = styled.p`
   line-height: 20.21px;
   font-weight: 400;
   text-align: center;
+`;
+
+export const Hero = styled.section`
+  background-image: linear-gradient(
+      0deg,
+      #191521 8.47%,
+      rgba(25, 21, 33, 0) 35.95%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(${heroBackground});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+  padding-top: 170px;
 `;

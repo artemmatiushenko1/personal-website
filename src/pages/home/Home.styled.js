@@ -1,20 +1,4 @@
 import styled from 'styled-components';
-import heroBackground from 'assets/images/hero-background.png';
-
-export const Hero = styled.div`
-  background-image: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.2)
-    ),
-    url(${heroBackground});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  height: 100vh;
-  padding-top: 170px;
-`;
 
 export const FrontImg = styled.img`
   position: absolute;

@@ -9,4 +9,5 @@ export const Wrapper = styled.div`
   right: 45px;
   transform: translateY(-50%);
   row-gap: 5px;
+  z-index: 100;
 `;

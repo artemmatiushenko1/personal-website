@@ -1,4 +1,5 @@
 import Navigation from 'components/navigation/Navigation.js';
+import Socials from 'components/socials/Socials.js';
 import { Home } from 'pages';
 import { Routes, Route } from 'react-router';
 import * as S from './App.styled.js';
@@ -7,6 +8,7 @@ const App = () => {
   return (
     <S.App>
       <Navigation />
+      <Socials />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Home />} />
