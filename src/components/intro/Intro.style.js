@@ -5,7 +5,6 @@ export const IntroBox = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 92px;
   z-index: 100;
 `;
 

@@ -1,6 +1,19 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
+export const ActionBar = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  position: fixed;
+  width: 100%;
+  max-width: 1268px;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+`;
+
 export const Nav = styled.nav`
   display: flex;
   column-gap: 60px;

@@ -1,14 +1,6 @@
 import styled from 'styled-components';
 import heroBackground from 'assets/images/hero-background.png';
 
-export const ActionBar = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding-top: 30px;
-  position: sticky;
-  top: 0;
-`;
-
 export const Hero = styled.div`
   background-image: linear-gradient(
       0deg,
@@ -21,6 +13,7 @@ export const Hero = styled.div`
   background-size: cover;
   overflow: hidden;
   height: 100vh;
+  padding-top: 170px;
 `;
 
 export const FrontImg = styled.img`
