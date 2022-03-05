@@ -21,7 +21,7 @@ export const Nav = styled.nav`
 `;
 
 export const NavItem = styled(NavLink)`
-  font-size: 16px;
+  font-size: 14px;
   text-transform: uppercase;
   position: relative;
   line-height: 23px;
@@ -35,7 +35,7 @@ export const NavItem = styled(NavLink)`
     height: 2px;
     left: 0;
     bottom: -5px;
-    transition: all 0.2s;
+    transition: all 0.2s ease-in-out;
   }
 
   :link,

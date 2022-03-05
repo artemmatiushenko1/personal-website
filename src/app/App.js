@@ -1,5 +1,5 @@
 import Navigation from 'components/navigation/Navigation.js';
-import Socials from 'components/socials/Socials.js';
+import { Socials } from 'components/socials';
 import { Home } from 'pages';
 import { Routes, Route } from 'react-router';
 import * as S from './App.styled.js';

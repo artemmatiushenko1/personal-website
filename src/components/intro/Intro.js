@@ -1,6 +1,6 @@
 import personalPicture from 'assets/images/personal-picture.png';
-import Container from 'components/container/Container';
-import MoreButton from 'components/more-button/MoreButton';
+import Container from 'components/container';
+import { MoreButton } from 'components/more-button';
 import * as S from './Intro.style';
 
 const Intro = () => {

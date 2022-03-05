@@ -1,4 +1,4 @@
-import IconButton from 'components/icon-button/IconButton';
+import { IconButton } from 'components/icon-button';
 import { ReactComponent as TwitterIcon } from 'assets/icons/icon-twitter.svg';
 import { ReactComponent as InstagramIcon } from 'assets/icons/icon-instagram.svg';
 import { ReactComponent as TikTokIcon } from 'assets/icons/icon-tiktok.svg';

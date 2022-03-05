@@ -35,9 +35,9 @@ export const Description = styled.p`
 
 export const Hero = styled.section`
   background-image: linear-gradient(
-      0deg,
-      #191521 8.47%,
-      rgba(25, 21, 33, 0) 35.95%
+      360deg,
+      rgba(25, 21, 33, 0.65) 4.57%,
+      rgba(25, 21, 33, 0) 24.55%
     ),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(${heroBackground});
