@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import heroBackground from 'assets/images/hero-background.png';
 
-export const Header = styled.div`
+export const ActionBar = styled.div`
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
+  position: sticky;
+  top: 0;
 `;
 
 export const Hero = styled.div`
@@ -15,7 +17,23 @@ export const Hero = styled.div`
     ),
     url(${heroBackground});
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+`;
+
+export const FrontImg = styled.img`
+  position: absolute;
+  max-width: 100%;
+  width: 100%;
+  z-index: 2000;
+`;
+
+export const BackImg = styled.img`
+  position: absolute;
+  max-width: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
 `;

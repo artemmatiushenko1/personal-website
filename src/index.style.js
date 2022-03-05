@@ -34,4 +34,8 @@ export const GlobalStyle = createGlobalStyle`
       background: #c2c2c2;
       border-radius: 10px;
     }
+
+    ::selection{
+      background-color: #2a99d1;
+    }
 `;
