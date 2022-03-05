@@ -7,6 +7,10 @@ const App = () => {
     <S.App>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<Home />} />
+        <Route path="/nft" element={<Home />} />
+        <Route path="/contacts" element={<Home />} />
+        <Route path="/links" element={<Home />} />
       </Routes>
     </S.App>
   );

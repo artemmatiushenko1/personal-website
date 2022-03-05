@@ -17,6 +17,11 @@ export const NavItem = styled(NavLink)`
     position: absolute;
     background-color: #fff;
     transition: all 0.2s ease;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    transition: all 0.2s;
   }
 
   :link,
@@ -29,9 +34,6 @@ export const NavItem = styled(NavLink)`
   :active {
     ::after {
       width: 100%;
-      height: 2px;
-      left: 0;
-      bottom: -5px;
     }
   }
 
