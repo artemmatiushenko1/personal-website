@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   top: 50%;
   right: 45px;
   transform: translateY(-50%);
-  row-gap: 5px;
+  row-gap: 15px;
   z-index: 100;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.large}) {

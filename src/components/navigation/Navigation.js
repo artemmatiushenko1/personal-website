@@ -23,7 +23,7 @@ const Navigation = () => {
 
   return (
     <S.ActionBar>
-      <Logo />
+      <S.Logo />
       {isTablet ? (
         <HamburgerButton isActive={isNavVisible} onClick={toggleHav} />
       ) : null}

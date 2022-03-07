@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Button = styled.a`
   background-color: transparent;
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -13,6 +13,8 @@ export const Button = styled.a`
   transition: background-color 0.2s ease;
 
   svg {
+    width: 18px;
+    height: auto;
     transition: transform 0.2s ease-in;
   }
 

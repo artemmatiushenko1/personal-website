@@ -5,13 +5,13 @@ export const Button = styled.button`
   backdrop-filter: blur(15px);
   border-radius: 200px;
   border: none;
-  font-family: ${({ theme }) => theme.typography.fonts.secondary}, monospace;
+  font-family: ${({ theme }) => theme.typography.fonts.primary}, monospace;
   color: ${({ theme }) => theme.palette.common.white};
   display: flex;
   align-items: center;
   padding: 11.5px 23px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 16px;
   position: absolute;
   bottom: 70px;
@@ -31,6 +31,8 @@ export const Button = styled.button`
 
   svg {
     margin-right: 17px;
+    width: 24px;
+    height: auto;
   }
 
   svg #wheel {

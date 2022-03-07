@@ -3,12 +3,20 @@ import { Socials } from 'components/socials';
 import { Home } from 'pages';
 import { Routes, Route } from 'react-router';
 import * as S from './App.styled.js';
+import { ThemeContext } from 'styled-components';
+import { useContext } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 const App = () => {
+  const { breakpoints } = useContext(ThemeContext);
+  const isMobile = useMediaQuery({
+    query: `(max-width: ${breakpoints.small})`,
+  });
+
   return (
     <S.App>
       <Navigation />
-      <Socials />
+      {!isMobile && <Socials />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Home />} />

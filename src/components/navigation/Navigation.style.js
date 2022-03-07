@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import { ReactComponent as LogoSvg } from 'assets/images/logo.svg';
+
+export const Logo = styled(LogoSvg)`
+  height: 20px;
+  width: auto;
+`;
 
 export const ActionBar = styled.div`
   display: flex;

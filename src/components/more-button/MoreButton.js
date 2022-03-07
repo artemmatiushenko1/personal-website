@@ -10,7 +10,7 @@ const MoreButton = () => {
   return (
     <S.Button onClick={onClickHandler}>
       <MouseIcon />
-      scroll down for more
+      ABOUT ME
     </S.Button>
   );
 };

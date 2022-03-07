@@ -13,6 +13,11 @@ export const PersonalPhoto = styled.img`
   border: 4px solid ${({ theme }) => theme.palette.common.white};
   border-radius: 50%;
   margin-bottom: 7px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    width: 150px;
+    height: auto;
+  }
 `;
 
 export const Title = styled.h1`
@@ -70,8 +75,4 @@ export const Hero = styled.section`
   overflow: hidden;
   height: 100vh;
   padding-top: 170px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
-    padding-top: 200px;
-  }
 `;
