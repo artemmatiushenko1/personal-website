@@ -11,7 +11,12 @@ export const Section = styled.section`
     url(${aboutPhoto});
   height: 100vh;
   background-color: rgb(27, 18, 33);
-  background-position-y: 25%;
+  background-position-y: 80px;
   background-size: contain;
   background-repeat: no-repeat;
+
+  p {
+    color: #fff;
+    font-size: 18px;
+  }
 `;

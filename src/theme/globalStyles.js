@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
       box-sizing: border-box;
       -webkit-overflow-scrolling: touch;
       scroll-behavior: smooth;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
 
     body {

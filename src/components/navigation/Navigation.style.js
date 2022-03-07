@@ -41,8 +41,8 @@ export const Nav = styled.nav`
     right: ${({ isVisible }) => (isVisible ? '0' : '-100%')};
     top: 0;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(15px);
+    background-color: rgb(27, 18, 33);
+    /* backdrop-filter: blur(15px); */
     padding: 30px;
     padding-left: 45px;
     padding-right: 0;

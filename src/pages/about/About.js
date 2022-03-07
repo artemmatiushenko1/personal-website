@@ -5,7 +5,9 @@ import * as S from './About.style';
 const About = () => {
   return (
     <S.Section id="about">
-      <Container>About</Container>
+      <Container>
+        <p></p>
+      </Container>
     </S.Section>
   );
 };

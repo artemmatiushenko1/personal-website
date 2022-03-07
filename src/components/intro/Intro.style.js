@@ -75,4 +75,5 @@ export const Hero = styled.section`
   overflow: hidden;
   height: 100vh;
   padding-top: 170px;
+  position: relative;
 `;
