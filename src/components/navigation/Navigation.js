@@ -1,5 +1,4 @@
 import * as S from './Navigation.style';
-import { ReactComponent as Logo } from 'assets/images/logo.svg';
 import { HamburgerButton } from 'components/humburger-button';
 import { useMediaQuery } from 'react-responsive';
 import { ThemeContext } from 'styled-components';
@@ -11,6 +10,7 @@ const Navigation = () => {
     query: `(max-width: ${breakpoints.medium})`,
   });
   const [isNavVisible, setIsNavVisible] = useState(false);
+
   const toggleHav = () => {
     setIsNavVisible((prevState) => {
       return !prevState;
