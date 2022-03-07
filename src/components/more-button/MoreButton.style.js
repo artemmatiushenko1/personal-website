@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  background-color: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(15px);
   border-radius: 200px;
   border: none;
-  font-family: 'Courier Prime', monospace;
-  color: #fff;
+  font-family: ${({ theme }) => theme.typography.fonts.secondary}, monospace;
+  color: ${({ theme }) => theme.palette.common.white};
   display: flex;
   align-items: center;
-  padding: 15px 23px;
+  padding: 11.5px 23px;
   cursor: pointer;
   font-size: 16px;
   line-height: 16px;

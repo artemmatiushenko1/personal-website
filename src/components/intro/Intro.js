@@ -9,9 +9,12 @@ const Intro = () => {
       <Container>
         <S.IntroBox>
           <S.PersonalPhoto src={personalPicture} alt="Artem Matiushenko" />
-          <S.Title>Artem Matiushenko</S.Title>
+          <S.Title>
+            <span>Artem </span>
+            <span>Matiushenko</span>
+          </S.Title>
           <S.Description>
-            photographer & digital artist from Ukraine
+            photographer & digital artist <span>from Ukraine</span>
           </S.Description>
           <MoreButton />
         </S.IntroBox>

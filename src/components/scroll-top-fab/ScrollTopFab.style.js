@@ -7,8 +7,8 @@ export const Button = styled.button`
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  color: #fff;
-  right: 45px;
+  color: ${({ theme }) => theme.palette.common.white};
+  right: 40px;
   bottom: 45px;
   cursor: pointer;
   font-size: 30px;
@@ -24,5 +24,9 @@ export const Button = styled.button`
 
   &.clicked {
     top: -100px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
+    right: 20px;
   }
 `;

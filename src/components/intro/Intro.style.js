@@ -10,27 +10,50 @@ export const IntroBox = styled.div`
 `;
 
 export const PersonalPhoto = styled.img`
-  border: 4px solid #fff;
+  border: 4px solid ${({ theme }) => theme.palette.common.white};
   border-radius: 50%;
   margin-bottom: 7px;
 `;
 
 export const Title = styled.h1`
-  color: #fff;
+  color: ${({ theme }) => theme.palette.common.white};
   font-size: 75px;
   font-weight: 600;
   line-height: 108.38px;
   margin-bottom: 18px;
   text-align: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    word-wrap: break-word;
+    font-size: 65px;
+    line-height: 80px;
+
+    span {
+      display: block;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    font-size: 45px;
+    line-height: 60px;
+  }
 `;
 
 export const Description = styled.p`
-  color: #fff;
-  font-family: 'Courier Prime';
+  color: ${({ theme }) => theme.palette.common.white};
+  font-family: ${({ theme }) => theme.typography.fonts.secondary};
   font-size: 18px;
   line-height: 20.21px;
   font-weight: 400;
   text-align: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    font-size: 16px;
+
+    span {
+      display: block;
+    }
+  }
 `;
 
 export const Hero = styled.section`
@@ -47,4 +70,8 @@ export const Hero = styled.section`
   overflow: hidden;
   height: 100vh;
   padding-top: 170px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    padding-top: 200px;
+  }
 `;
