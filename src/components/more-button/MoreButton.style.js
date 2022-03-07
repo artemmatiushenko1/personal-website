@@ -20,8 +20,8 @@ export const Button = styled.button`
   :hover {
     transform: translateY(2px);
 
-    svg {
-      transform: scale(1, -1);
+    svg #wheel {
+      transform: translateY(9px);
     }
   }
 
@@ -31,6 +31,9 @@ export const Button = styled.button`
 
   svg {
     margin-right: 17px;
-    transition: transform 0.3s ease-in;
+  }
+
+  svg #wheel {
+    transition: transform 0.2s ease-in;
   }
 `;
