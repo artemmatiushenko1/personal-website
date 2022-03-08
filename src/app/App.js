@@ -6,6 +6,7 @@ import * as S from './App.styled.js';
 import { ThemeContext } from 'styled-components';
 import { useContext } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import Links from 'pages/links/Links.js';
 
 const App = () => {
   const { breakpoints } = useContext(ThemeContext);
@@ -22,7 +23,7 @@ const App = () => {
         <Route path="/portfolio" element={<Home />} />
         <Route path="/nft" element={<Home />} />
         <Route path="/contacts" element={<Home />} />
-        <Route path="/links" element={<Home />} />
+        <Route path="/links" element={<Links />} />
       </Routes>
     </S.App>
   );
