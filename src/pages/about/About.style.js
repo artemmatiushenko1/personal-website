@@ -5,7 +5,9 @@ export const Section = styled.section`
   background-color: #202020;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 95px 0;
+  min-height: 100vh;
 
   p {
     color: #fff;
