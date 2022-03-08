@@ -4,16 +4,16 @@ import { About } from 'pages/about';
 import { useEffect, useState } from 'react';
 
 const Home = () => {
-  const [ableScrollUp, setAbleScrollUp] = useState(false);
+  const [ableScrollTop, setAbleScrollTop] = useState(false);
 
   const onScrollHandler = () => {
     if (
       document.body.scrollTop > 20 ||
       document.documentElement.scrollTop > 20
     ) {
-      setAbleScrollUp(true);
+      setAbleScrollTop(true);
     } else {
-      setAbleScrollUp(false);
+      setAbleScrollTop(false);
     }
   };
 
@@ -34,7 +34,7 @@ const Home = () => {
     <>
       <Intro />
       <About />
-      {ableScrollUp && <ScrollTopFab onClick={scrollToTop} />}
+      {ableScrollTop && <ScrollTopFab onClick={scrollToTop} />}
     </>
   );
 };

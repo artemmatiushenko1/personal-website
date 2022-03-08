@@ -8,21 +8,21 @@ export const Section = styled.section`
   align-items: center;
   padding: 95px 0;
   min-height: 100vh;
+`;
 
-  p {
-    color: #fff;
-    font-size: 16px;
-    max-width: 900px;
-    padding: 0px 80px;
-    font-family: ${({ theme }) => theme.typography.fonts.secondary};
+export const Text = styled.p`
+  color: #fff;
+  font-size: 16px;
+  max-width: 900px;
+  padding: 0px 80px;
+  font-family: ${({ theme }) => theme.typography.fonts.secondary};
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
-      padding: 0px 35px;
-    }
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    padding: 0px 35px;
+  }
 
-    span {
-      display: block;
-      text-align: center;
-    }
+  span {
+    display: block;
+    text-align: center;
   }
 `;

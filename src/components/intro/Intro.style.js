@@ -60,7 +60,7 @@ export const Description = styled.p`
   }
 `;
 
-export const Hero = styled.section`
+export const Section = styled.section`
   background-color: #202020;
   height: 100vh;
   padding-top: 170px;

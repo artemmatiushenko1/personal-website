@@ -2,13 +2,13 @@ import * as S from './HamburgerButton.style';
 
 const HamburgerButton = ({ onClick, isActive }) => {
   return (
-    <S.Container isActive={isActive} onClick={onClick}>
+    <S.Box onClick={onClick}>
       <div>
-        <span></span>
-        <span></span>
-        <span></span>
+        <S.LineTop isActive={isActive} />
+        <S.LineMiddle isActive={isActive} />
+        <S.LineBottom isActive={isActive} />
       </div>
-    </S.Container>
+    </S.Box>
   );
 };
 

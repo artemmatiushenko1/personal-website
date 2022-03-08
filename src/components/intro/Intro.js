@@ -5,7 +5,7 @@ import * as S from './Intro.style';
 
 const Intro = () => {
   return (
-    <S.Hero id="intro">
+    <S.Section>
       <Container>
         <S.IntroBox>
           <S.PersonalPhoto src={personalPicture} alt="Artem Matiushenko" />
@@ -19,7 +19,7 @@ const Intro = () => {
           <MoreButton />
         </S.IntroBox>
       </Container>
-    </S.Hero>
+    </S.Section>
   );
 };
 

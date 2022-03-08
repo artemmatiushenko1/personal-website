@@ -6,7 +6,7 @@ export const ArrowIcon = styled(Arrow)`
   height: auto;
 `;
 
-export const Button = styled.button`
+export const Box = styled.button`
   position: fixed;
   background: none;
   border: none;

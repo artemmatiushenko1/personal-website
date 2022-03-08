@@ -6,7 +6,7 @@ const About = () => {
   return (
     <S.Section id="about">
       <Container>
-        <p>
+        <S.Text>
           Hi, I am Artem Matiushenko or as most people know me - artemko, 18
           years old art photographer from a small village in Ukraine.
           <br />
@@ -40,7 +40,7 @@ const About = () => {
           <br />
           <br />
           <span>Join me in this incredible journey!</span>
-        </p>
+        </S.Text>
       </Container>
     </S.Section>
   );
