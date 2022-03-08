@@ -24,7 +24,7 @@ export const Container = styled.div`
       width: 100%;
       height: 2px;
       background-color: #000;
-      transition: all 0.2s;
+      transition: all 0.5s;
     }
 
     span:nth-of-type(1) {

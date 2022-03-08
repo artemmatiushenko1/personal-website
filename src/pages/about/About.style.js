@@ -1,22 +1,26 @@
 import styled from 'styled-components';
-import aboutPhoto from 'assets/images/about-photo.png';
 
 export const Section = styled.section`
   position: relative;
-  background-image: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.1),
-      rgba(0, 0, 0, 0.1)
-    ),
-    url(${aboutPhoto});
-  height: 100vh;
-  background-color: rgb(27, 18, 33);
-  background-position-y: 80px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-color: #202020;
+  display: flex;
+  justify-content: center;
+  padding: 95px 0;
 
   p {
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
+    max-width: 900px;
+    padding: 0px 80px;
+    font-family: ${({ theme }) => theme.typography.fonts.secondary};
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+      padding: 0px 35px;
+    }
+
+    span {
+      display: block;
+      text-align: center;
+    }
   }
 `;
