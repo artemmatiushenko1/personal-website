@@ -17,7 +17,7 @@ export const Grid = styled.div`
   align-items: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
-    gap: 40px;
+    gap: 30px;
   }
 `;
 
@@ -54,4 +54,8 @@ export const Desc = styled.p`
   color: ${({ theme }) => theme.palette.common.white};
   opacity: 0.5;
   font-size: 10px;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
 `;
