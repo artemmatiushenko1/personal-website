@@ -1,3 +1,4 @@
+import Container from 'components/container';
 import styled from 'styled-components';
 
 export const IntroBox = styled.div`
@@ -6,6 +7,7 @@ export const IntroBox = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 100;
+  height: 100%;
 `;
 
 export const PersonalPhoto = styled.img`
@@ -62,7 +64,11 @@ export const Description = styled.p`
 
 export const Section = styled.section`
   background-color: #202020;
+  max-height: 100vh;
   height: 100vh;
-  padding-top: 170px;
   position: relative;
+
+  ${Container} {
+    height: 100%;
+  }
 `;

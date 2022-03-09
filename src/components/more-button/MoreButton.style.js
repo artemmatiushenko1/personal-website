@@ -13,8 +13,7 @@ export const Button = styled.button`
   cursor: pointer;
   font-size: 14px;
   line-height: 16px;
-  position: absolute;
-  bottom: 70px;
+  margin-top: 70px;
   transition: transform 0.2s ease;
 
   :hover {
