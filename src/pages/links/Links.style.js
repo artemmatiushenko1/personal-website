@@ -40,7 +40,11 @@ export const Link = styled.a`
   column-gap: 20px;
 `;
 
-export const Img = styled.img``;
+export const Img = styled.img`
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+`;
 
 export const Text = styled.div``;
 

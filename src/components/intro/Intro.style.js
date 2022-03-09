@@ -14,6 +14,8 @@ export const PersonalPhoto = styled.img`
   border: 4px solid ${({ theme }) => theme.palette.common.white};
   border-radius: 50%;
   margin-bottom: 7px;
+  width: 168px;
+  height: 168px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
     width: 150px;
