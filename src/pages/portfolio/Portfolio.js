@@ -4,6 +4,7 @@ import { storage } from '../../firebase/config';
 import * as S from './Portfolio.style';
 import Container from 'components/container';
 import { Spinner } from 'components/spinner';
+import { SRLWrapper } from 'simple-react-lightbox';
 
 const Photo = ({ src, alt }) => {
   return (
@@ -43,15 +44,17 @@ const Portfolio = () => {
   return (
     <S.Section>
       <Container>
-        <S.MasonryGrid
-          breakpointCols={breakpointColumnsObj}
-          className="my-masonry-grid"
-          columnClassName="my-masonry-grid_column"
-        >
-          {urls.map((url) => {
-            return <Photo src={url} alt={url} />;
-          })}
-        </S.MasonryGrid>
+        <SRLWrapper>
+          <S.MasonryGrid
+            breakpointCols={breakpointColumnsObj}
+            className="my-masonry-grid"
+            columnClassName="my-masonry-grid_column"
+          >
+            {urls.map((url, i) => {
+              return <Photo src={url} alt={i} />;
+            })}
+          </S.MasonryGrid>
+        </SRLWrapper>
         {isLoading && <Spinner />}
       </Container>
     </S.Section>
