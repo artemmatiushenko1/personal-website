@@ -1,11 +1,9 @@
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ref, listAll, getDownloadURL } from '@firebase/storage';
 import { storage } from '../../firebase/config';
 import * as S from './Portfolio.style';
 import Container from 'components/container';
 import { Spinner } from 'components/spinner';
-import Masonry from 'react-masonry-css';
-import { ThemeContext } from 'styled-components';
 
 const Photo = ({ src, alt }) => {
   return (
@@ -16,7 +14,6 @@ const Photo = ({ src, alt }) => {
 };
 
 const Portfolio = () => {
-  const { breakpoints } = useContext(ThemeContext);
   const [urls, setUrls] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Oval as DefaultOval } from 'react-loader-spinner';
 
 export const Overlay = styled.div`
   position: fixed;
