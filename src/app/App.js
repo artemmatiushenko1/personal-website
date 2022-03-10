@@ -7,6 +7,7 @@ import { ThemeContext } from 'styled-components';
 import { useContext } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Links from 'pages/links/Links.js';
+import Portfolio from 'pages/portfolio/Portfolio.js';
 
 const App = () => {
   const { pathname } = useLocation();
@@ -21,7 +22,7 @@ const App = () => {
       {!isMobile && pathname !== '/links' && <Socials />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/portfolio" element={<Home />} />
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/nft" element={<Home />} />
         <Route path="/contacts" element={<Home />} />
         <Route path="/links" element={<Links />} />
