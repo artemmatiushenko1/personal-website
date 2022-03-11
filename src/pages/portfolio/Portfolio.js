@@ -5,11 +5,14 @@ import * as S from './Portfolio.style';
 import Container from 'components/container';
 import { Spinner } from 'components/spinner';
 import { SRLWrapper } from 'simple-react-lightbox';
+import LazyLoad from 'react-lazyload';
 
 const Photo = ({ src, alt }) => {
   return (
     <S.ImgContainer>
-      <img src={src} alt={alt} />
+      <LazyLoad height={350} once offset={100}>
+        <img src={src} alt={alt} />
+      </LazyLoad>
     </S.ImgContainer>
   );
 };
