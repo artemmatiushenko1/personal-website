@@ -8,6 +8,7 @@ import { useContext } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Links from 'pages/links/Links.js';
 import Portfolio from 'pages/portfolio/Portfolio.js';
+import Upload from 'pages/upload/Upload.js';
 
 const App = () => {
   const { pathname } = useLocation();
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/nft" element={<Home />} />
         <Route path="/contacts" element={<Home />} />
         <Route path="/links" element={<Links />} />
+        <Route path="/upload" element={<Upload />} />
       </Routes>
     </S.App>
   );

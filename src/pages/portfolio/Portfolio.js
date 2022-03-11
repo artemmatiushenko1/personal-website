@@ -1,60 +1,52 @@
-import { useEffect, useState } from 'react';
-import { ref, listAll, getDownloadURL } from '@firebase/storage';
-import { storage } from '../../firebase/config';
+import { useEffect } from 'react';
 import * as S from './Portfolio.style';
 import Container from 'components/container';
 import { Spinner } from 'components/spinner';
 import { SRLWrapper } from 'simple-react-lightbox';
-import LazyLoad from 'react-lazyload';
+import { useDispatch, useSelector } from 'react-redux';
+import { getArtworks } from 'redux/slices/artworksSlice';
+import { Photo } from 'components/photo';
+import { artworksSelector, isLoadingSelector } from 'redux/selectors/artworks';
 
-const Photo = ({ src, alt }) => {
-  return (
-    <S.ImgContainer>
-      <LazyLoad height={350} once offset={100}>
-        <img src={src} alt={alt} />
-      </LazyLoad>
-    </S.ImgContainer>
-  );
+const SRLOptions = {
+  caption: {
+    showCaption: false,
+  },
+  buttons: {
+    showAutoplayButton: false,
+    showDownloadButton: false,
+  },
+};
+
+const masonryGridBreakpoints = {
+  default: 4,
+  1100: 3,
+  900: 2,
+  500: 1,
 };
 
 const Portfolio = () => {
-  const [urls, setUrls] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const breakpointColumnsObj = {
-    default: 4,
-    1100: 3,
-    900: 2,
-    500: 1,
-  };
+  const dispatch = useDispatch();
+  const artworks = useSelector(artworksSelector);
+  const isLoading = useSelector(isLoadingSelector);
 
   useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
-      const listRef = ref(storage, 'art');
-      const res = await listAll(listRef);
-      const paths = await Promise.all(
-        res.items.map(async (item) => await getDownloadURL(item))
-      );
-      setUrls(paths);
-      setIsLoading(false);
-      console.log(paths);
-    };
-
-    fetchData();
-  }, []);
+    if (artworks.length === 0) {
+      dispatch(getArtworks());
+    }
+  }, [dispatch, artworks.length]);
 
   return (
     <S.Section>
       <Container>
-        <SRLWrapper>
+        <SRLWrapper options={SRLOptions}>
           <S.MasonryGrid
-            breakpointCols={breakpointColumnsObj}
+            breakpointCols={masonryGridBreakpoints}
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"
           >
-            {urls.map((url, i) => {
-              return <Photo src={url} alt={i} />;
+            {artworks.map(({ imgUrl, id }) => {
+              return <Photo key={id} src={imgUrl} alt={id} />;
             })}
           </S.MasonryGrid>
         </SRLWrapper>

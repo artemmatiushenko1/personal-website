@@ -5,20 +5,7 @@ import logoInstagram from 'assets/icons/logo-instagram.svg';
 import logoYouTube from 'assets/icons/logo-youtube.svg';
 import logoFilterGrade from 'assets/icons/logo-fg.svg';
 import logoTwitter from 'assets/icons/logo-twitter.svg';
-
-const LinkBox = ({ title, desc, img, url }) => {
-  return (
-    <S.Box>
-      <S.Link href={url} target="_blank">
-        <S.Img src={img} alt={title} />
-        <S.Text>
-          <S.Title>{title}</S.Title>
-          <S.Desc>{desc}</S.Desc>
-        </S.Text>
-      </S.Link>
-    </S.Box>
-  );
-};
+import LinkBox from 'components/link-box/LinkBox';
 
 const links = [
   {

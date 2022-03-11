@@ -92,7 +92,7 @@ export const NavItem = styled(NavLink)`
 
       @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
         left: -17px;
-        height: 100%;
+        height: 80%;
         width: 2px;
       }
     }
