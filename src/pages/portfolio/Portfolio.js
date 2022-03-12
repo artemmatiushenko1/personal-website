@@ -28,7 +28,6 @@ const masonryGridBreakpoints = {
 };
 
 const categoriesOptions = [
-  { value: 'all', label: 'all' },
   { value: 'art', label: 'art' },
   { value: 'portrait', label: 'portrait' },
   { value: 'nature', label: 'nature' },
@@ -48,10 +47,11 @@ const customStyles = {
     ...provided,
     backgroundColor: isSelected ? '#fff' : 'transparent',
     color: '#000',
+    fontWeight: isSelected ? '600' : '400',
     transition: 'background-color 0.2s ease',
     cursor: 'pointer',
     ':hover': {
-      backgroundColor: !isSelected ? 'rgba(255, 255, 255, 0.8)' : 'none',
+      backgroundColor: !isSelected ? '#f1f2f6' : 'none',
     },
   }),
   control: (provided, { isFocused }) => ({
@@ -88,8 +88,7 @@ const customStyles = {
   }),
   menu: (provided) => ({
     ...provided,
-    backgroundColor: 'rgba(255, 255, 255, 0.6)',
-    backdropFilter: 'blur(20px)',
+    backgroundColor: 'rgba(255, 255, 255, 1)',
     borderRadius: '10px',
     overflow: 'hidden',
     boxShadow: 'none',

@@ -18,10 +18,7 @@ export const NavContainer = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
     flex-direction: row-reverse;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
-    padding: 15px 25px 10px 25px;
+    padding: 15px 15px 10px 15px;
   }
 `;
 

@@ -5,6 +5,10 @@ export const Section = styled.section`
   padding: 90px 20px 0 20px;
   min-height: 100vh;
   background-color: #202020;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    padding: 90px 10px 0 10px;
+  }
 `;
 
 export const MasonryGrid = styled(Masonry)`
@@ -59,12 +63,12 @@ export const ButtonResetFilter = styled.div`
 
   svg {
     width: 15px;
-    height: auto;
+    height: 15px;
     transition: 0.5s ease;
   }
 
   :hover {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     transform: translateY(1px);
   }
 
