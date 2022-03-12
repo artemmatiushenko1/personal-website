@@ -11,11 +11,16 @@ export const Overlay = styled.div`
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   height: 40px;
-  bottom: -15%;
+  bottom: -200px;
   left: 10px;
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.25);
   transition: 0.2s ease-in-out;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    height: 30px;
+    font-size: 12px;
+  }
 `;
 
 export const ImgContainer = styled.div`
