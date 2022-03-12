@@ -20,7 +20,7 @@ export const PhotoWrapper = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
     width: 150px;
-    height: auto;
+    height: 150px;
   }
 `;
 

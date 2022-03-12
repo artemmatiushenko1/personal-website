@@ -3,6 +3,7 @@ import React from 'react';
 import * as S from './About.style';
 import { ReactComponent as ExploreIcon } from 'assets/icons/icon-compass.svg';
 import { useNavigate } from 'react-router';
+import { Footer } from 'components/footer';
 
 const About = () => {
   const navigate = useNavigate();
@@ -54,6 +55,7 @@ const About = () => {
         >
           explore portfolio
         </S.ExploreButton>
+        <Footer />
       </Container>
     </S.Section>
   );
