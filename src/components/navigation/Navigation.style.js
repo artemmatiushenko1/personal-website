@@ -7,27 +7,32 @@ export const Logo = styled(LogoSvg)`
   width: auto;
 `;
 
-export const ActionBar = styled.div`
+export const NavContainer = styled.div`
+  max-width: 1268px;
+  padding: 25px 25px 20px 25px;
+  margin: 0 auto;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  width: 100%;
-  max-width: 1268px;
-  padding: 30px 25px 0 25px;
-  margin: 0 auto;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  z-index: 100;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
     flex-direction: row-reverse;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
-    padding: 25px 25px 0 25px;
+    padding: 15px 25px 10px 25px;
   }
+`;
+
+export const ActionBar = styled.div`
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  backdrop-filter: blur(25px);
 `;
 
 export const Nav = styled.nav`
@@ -41,7 +46,7 @@ export const Nav = styled.nav`
     right: ${({ isVisible }) => (isVisible ? '0' : '-100%')};
     top: 0;
     flex-direction: column;
-    background-color: rgba(32, 32, 32, 0.5);
+    background-color: rgba(32, 32, 32, 0.95);
     backdrop-filter: blur(20px);
     padding: 30px;
     padding-left: 45px;

@@ -23,27 +23,29 @@ const Navigation = () => {
 
   return (
     <S.ActionBar>
-      <S.Logo />
-      {isTablet ? (
-        <HamburgerButton isActive={isNavVisible} onClick={toggleHav} />
-      ) : null}
-      <S.Nav isVisible={isNavVisible}>
-        <S.NavItem to="/" onClick={onNavItemSelected}>
-          Home
-        </S.NavItem>
-        <S.NavItem to="/portfolio" onClick={onNavItemSelected}>
-          Portfolio
-        </S.NavItem>
-        <S.NavItem to="/nft" onClick={onNavItemSelected}>
-          Nft
-        </S.NavItem>
-        <S.NavItem to="/contacts" onClick={onNavItemSelected}>
-          Contacts
-        </S.NavItem>
-        <S.NavItem to="/links" onClick={onNavItemSelected}>
-          Links
-        </S.NavItem>
-      </S.Nav>
+      <S.NavContainer>
+        <S.Logo />
+        {isTablet ? (
+          <HamburgerButton isActive={isNavVisible} onClick={toggleHav} />
+        ) : null}
+        <S.Nav isVisible={isNavVisible}>
+          <S.NavItem to="/" onClick={onNavItemSelected}>
+            Home
+          </S.NavItem>
+          <S.NavItem to="/portfolio" onClick={onNavItemSelected}>
+            Portfolio
+          </S.NavItem>
+          <S.NavItem to="/nft" onClick={onNavItemSelected}>
+            Nft
+          </S.NavItem>
+          <S.NavItem to="/contacts" onClick={onNavItemSelected}>
+            Contacts
+          </S.NavItem>
+          <S.NavItem to="/links" onClick={onNavItemSelected}>
+            Links
+          </S.NavItem>
+        </S.Nav>
+      </S.NavContainer>
     </S.ActionBar>
   );
 };

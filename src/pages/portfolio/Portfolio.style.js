@@ -46,8 +46,8 @@ export const SelectsWrapper = styled.div`
 `;
 
 export const ButtonResetFilter = styled.div`
-  min-width: 25px;
-  height: 25px;
+  min-width: 30px;
+  height: 30px;
   background-color: #fff;
   border-radius: 50%;
   display: flex;
