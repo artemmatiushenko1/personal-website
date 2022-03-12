@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Masonry from 'react-masonry-css';
 
 export const Section = styled.section`
-  padding: 120px 20px 0 20px;
+  padding: 90px 20px 0 20px;
   min-height: 100vh;
   background-color: #202020;
 `;

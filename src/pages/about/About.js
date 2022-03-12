@@ -47,7 +47,7 @@ const About = () => {
           things in their life and dive into my magic world.
           <br />
           <br />
-          <span>Join me in this incredible journey!</span>
+          <span>Join me in this incredible journey!✨</span>
         </S.Text>
         <S.ExploreButton
           icon={<ExploreIcon />}

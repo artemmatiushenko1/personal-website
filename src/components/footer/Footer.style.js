@@ -5,5 +5,5 @@ export const Footer = styled.footer`
   color: #fff;
   font-size: 12px;
   text-align: center;
-  padding: 70px 35px 40px 35px;
+  padding: 70px 30px 40px 30px;
 `;
