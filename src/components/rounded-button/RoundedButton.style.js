@@ -18,10 +18,6 @@ export const Button = styled.button`
 
   :hover {
     transform: translateY(2px);
-
-    svg #wheel {
-      transform: translateY(9px);
-    }
   }
 
   :active {
@@ -32,9 +28,5 @@ export const Button = styled.button`
     margin-right: 17px;
     width: 24px;
     height: auto;
-  }
-
-  svg #wheel {
-    transition: transform 0.2s ease-in;
   }
 `;

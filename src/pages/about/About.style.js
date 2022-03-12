@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { RoundedButton } from 'components/rounded-button';
+import Container from 'components/container';
 
 export const Section = styled.section`
   position: relative;
@@ -8,6 +10,12 @@ export const Section = styled.section`
   align-items: center;
   padding: 95px 0;
   min-height: 100vh;
+
+  ${Container} {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 `;
 
 export const Text = styled.p`
@@ -24,5 +32,24 @@ export const Text = styled.p`
   span {
     display: block;
     text-align: center;
+  }
+`;
+
+export const ExploreButton = styled(RoundedButton)`
+  font-size: 16px;
+  background-color: #fff;
+  color: #000;
+  align-self: center;
+  margin-top: 40px;
+
+  :hover {
+    svg {
+      transform-origin: center;
+      transform: rotate(360deg);
+    }
+  }
+
+  svg {
+    transition: 0.8s ease;
   }
 `;

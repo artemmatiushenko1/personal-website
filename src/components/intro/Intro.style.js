@@ -1,5 +1,6 @@
 import Container from 'components/container';
 import styled from 'styled-components';
+import { RoundedButton } from 'components/rounded-button';
 
 export const IntroBox = styled.div`
   display: flex;
@@ -77,5 +78,17 @@ export const Section = styled.section`
 
   ${Container} {
     height: 100%;
+  }
+`;
+
+export const ScrollToAboutButton = styled(RoundedButton)`
+  :hover {
+    svg #wheel {
+      transform: translateY(9px);
+    }
+  }
+
+  svg #wheel {
+    transition: transform 0.2s ease-in;
   }
 `;

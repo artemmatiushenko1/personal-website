@@ -1,9 +1,13 @@
 import personalPicture from 'assets/images/personal-picture.png';
 import Container from 'components/container';
-import { MoreButton } from 'components/more-button';
 import * as S from './Intro.style';
+import { ReactComponent as MouseIcon } from 'assets/icons/icon-mouse.svg';
 
 const Intro = () => {
+  const onMoreButtonClickHandler = () => {
+    window.location.href = '#about';
+  };
+
   return (
     <S.Section>
       <Container>
@@ -18,7 +22,12 @@ const Intro = () => {
           <S.Description>
             photographer & digital artist <span>from Ukraine</span>
           </S.Description>
-          <MoreButton />
+          <S.ScrollToAboutButton
+            icon={<MouseIcon />}
+            onClick={onMoreButtonClickHandler}
+          >
+            ABOUT ME
+          </S.ScrollToAboutButton>
         </S.IntroBox>
       </Container>
     </S.Section>

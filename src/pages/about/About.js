@@ -1,8 +1,15 @@
 import Container from 'components/container';
 import React from 'react';
 import * as S from './About.style';
+import { ReactComponent as ExploreIcon } from 'assets/icons/icon-compass.svg';
+import { useNavigate } from 'react-router';
 
 const About = () => {
+  const navigate = useNavigate();
+  const onExploreButtonClickHandler = () => {
+    navigate('/portfolio');
+  };
+
   return (
     <S.Section id="about">
       <Container>
@@ -41,6 +48,12 @@ const About = () => {
           <br />
           <span>Join me in this incredible journey!</span>
         </S.Text>
+        <S.ExploreButton
+          icon={<ExploreIcon />}
+          onClick={onExploreButtonClickHandler}
+        >
+          explore portfolio
+        </S.ExploreButton>
       </Container>
     </S.Section>
   );
