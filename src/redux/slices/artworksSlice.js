@@ -30,6 +30,7 @@ export const postArtwork = createAsyncThunk(
 
       const newArtwork = {
         imgUrl: downloadURL,
+        createdAt: new Date().toISOString(),
         name,
         categories,
       };

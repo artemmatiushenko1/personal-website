@@ -8,7 +8,9 @@ const Intro = () => {
     <S.Section>
       <Container>
         <S.IntroBox>
-          <S.PersonalPhoto src={personalPicture} alt="Artem Matiushenko" />
+          <S.PhotoWrapper>
+            <S.PersonalPhoto src={personalPicture} alt="Artem Matiushenko" />
+          </S.PhotoWrapper>
           <S.Title>
             <span>Artem </span>
             <span>Matiushenko</span>

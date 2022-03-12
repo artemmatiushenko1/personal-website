@@ -10,17 +10,22 @@ export const IntroBox = styled.div`
   height: 100%;
 `;
 
-export const PersonalPhoto = styled.img`
-  border: 4px solid ${({ theme }) => theme.palette.common.white};
-  border-radius: 50%;
-  margin-bottom: 7px;
+export const PhotoWrapper = styled.div`
   width: 168px;
   height: 168px;
+  margin-bottom: 7px;
+  border: 4px solid ${({ theme }) => theme.palette.common.white};
+  border-radius: 50%;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
     width: 150px;
     height: auto;
   }
+`;
+
+export const PersonalPhoto = styled.img`
+  width: 100%;
+  height: 100%;
 `;
 
 export const Title = styled.h1`

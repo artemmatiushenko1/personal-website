@@ -103,8 +103,8 @@ export const NavItem = styled(NavLink)`
       bottom: -5px;
       left: 50%;
       transform: translateX(-50%);
-      width: 6px;
-      height: 6px;
+      width: 5px;
+      height: 5px;
       border-radius: 50%;
 
       @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
