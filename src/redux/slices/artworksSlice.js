@@ -22,7 +22,7 @@ export const getArtworks = createAsyncThunk(
 
 export const postArtwork = createAsyncThunk(
   'artworks/postArtwork',
-  async ({ name, categories, file }, thunkApi) => {
+  async ({ name, categories, file, year }, thunkApi) => {
     try {
       const storageRef = ref(storage, `artworks/${file.name}`);
       const snapshot = await uploadBytes(storageRef, file);
@@ -32,6 +32,7 @@ export const postArtwork = createAsyncThunk(
         imgUrl: downloadURL,
         createdAt: new Date().toISOString(),
         name,
+        year,
         categories,
       };
 
@@ -61,6 +62,16 @@ export const artworksSlice = createSlice({
       state.isLoading = false;
     },
     [getArtworks.rejected]: (state, { payload }) => {
+      state.isLoading = false;
+    },
+    [postArtwork.pending]: (state, { payload }) => {
+      state.error = null;
+      state.isLoading = true;
+    },
+    [postArtwork.fulfilled]: (state, { payload }) => {
+      state.isLoading = false;
+    },
+    [postArtwork.rejected]: (state, { payload }) => {
       state.isLoading = false;
     },
   },

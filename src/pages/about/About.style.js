@@ -26,7 +26,7 @@ export const Text = styled.p`
   font-family: ${({ theme }) => theme.typography.fonts.secondary};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
-    padding: 0px 30px;
+    padding: 0px 20px;
   }
 
   span {

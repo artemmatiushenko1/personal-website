@@ -36,8 +36,12 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body::-webkit-scrollbar-thumb {
-      background: #c2c2c2;
+      background: #fff;
       border-radius: 10px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: #202020;
     }
 
     ::selection{
