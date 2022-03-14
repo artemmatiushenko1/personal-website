@@ -29,7 +29,7 @@ export const ActionBar = styled.div`
   top: 0;
   z-index: 100;
   width: 100%;
-  backdrop-filter: blur(25px);
+  background-color: #202020;
 `;
 
 export const Nav = styled.nav`
@@ -43,7 +43,7 @@ export const Nav = styled.nav`
     right: ${({ isVisible }) => (isVisible ? '0' : '-100%')};
     top: 0;
     flex-direction: column;
-    background-color: rgba(32, 32, 32, 0.95);
+    background-color: rgba(32, 32, 32, 0.7);
     backdrop-filter: blur(20px);
     padding: 30px;
     padding-left: 45px;
