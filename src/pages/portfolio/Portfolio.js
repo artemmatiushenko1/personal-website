@@ -24,7 +24,6 @@ const masonryGridBreakpoints = {
   default: 4,
   1100: 3,
   900: 2,
-  // 500: 1,
 };
 
 const categoriesOptions = [
@@ -57,10 +56,9 @@ const customStyles = {
   control: (provided, { isFocused }) => ({
     ...provided,
     width: 135,
-    backgroundColor: 'transaprent',
-    borderRadius: 0,
+    borderRadius: 50,
     border: 'none',
-    borderBottom: '2px solid #fff',
+    backgroundColor: '#fff',
     boxShadow: 'none',
     cursor: 'pointer',
     outline: isFocused ? 'none' : 'none',
@@ -80,7 +78,7 @@ const customStyles = {
   }),
   placeholder: (provided) => ({
     ...provided,
-    color: 'rgba(255, 255, 255, 0.6)',
+    color: '#202020',
   }),
   indicatorSeparator: (provided) => ({
     ...provided,
@@ -108,7 +106,7 @@ const customStyles = {
   }),
   singleValue: (provided) => ({
     ...provided,
-    color: '#fff',
+    color: '#202020',
   }),
 };
 

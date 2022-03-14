@@ -9,12 +9,16 @@ export const Logo = styled(LogoSvg)`
 
 export const NavContainer = styled.div`
   max-width: 1268px;
-  padding: 25px 25px 20px 25px;
+  padding: 25px 0px 20px 0px;
   margin: 0 auto;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
+    padding: 25px 20px 20px 20px;
+  }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
     flex-direction: row-reverse;

@@ -47,6 +47,11 @@ export const SelectsWrapper = styled.div`
   column-gap: 20px;
   justify-content: flex-end;
   align-items: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    column-gap: 10px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const ButtonResetFilter = styled.div`
