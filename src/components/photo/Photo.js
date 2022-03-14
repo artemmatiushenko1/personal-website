@@ -1,14 +1,24 @@
 import * as S from './Photo.style';
 import LazyLoad from 'react-lazyload';
+import { Placeholder } from 'components/placeholder';
+import { useRef } from 'react';
 
 const Photo = ({ src, alt }) => {
+  const imgRef = useRef();
+  const placeholderRef = useRef();
+  const onImgLoad = () => {
+    imgRef.current.classList.toggle('visible');
+    placeholderRef.current.remove();
+  };
+
   return (
     <S.ImgContainer>
-      <LazyLoad height={350} once offset={100}>
+      <Placeholder ref={placeholderRef} />
+      <LazyLoad once>
         <S.Overlay>
           <div>2019</div>
         </S.Overlay>
-        <S.Img src={src} alt={alt} />
+        <S.Img ref={imgRef} src={src} alt={alt} onLoad={onImgLoad} />
       </LazyLoad>
     </S.ImgContainer>
   );

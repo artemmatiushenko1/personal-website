@@ -154,7 +154,11 @@ const Portfolio = () => {
             })}
           </S.MasonryGrid>
         </SRLWrapper>
-        {isLoading && <Spinner />}
+        {isLoading && (
+          <S.SpinnerOverlay>
+            <Spinner />
+          </S.SpinnerOverlay>
+        )}
       </Container>
     </S.Section>
   );
