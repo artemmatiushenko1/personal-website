@@ -3,7 +3,7 @@ import LazyLoad from 'react-lazyload';
 import { Placeholder } from 'components/placeholder';
 import { useRef } from 'react';
 
-const Photo = ({ src, alt }) => {
+const Photo = ({ src, alt, year }) => {
   const imgRef = useRef();
   const placeholderRef = useRef();
   const onImgLoad = () => {
@@ -16,7 +16,7 @@ const Photo = ({ src, alt }) => {
       <Placeholder ref={placeholderRef} />
       <LazyLoad once>
         <S.Overlay>
-          <div>2019</div>
+          <div>{year}</div>
         </S.Overlay>
         <S.Img ref={imgRef} src={src} alt={alt} onLoad={onImgLoad} />
       </LazyLoad>

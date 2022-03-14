@@ -8,6 +8,7 @@ import { useContext } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Links from 'pages/links/Links.js';
 import Portfolio from 'pages/portfolio/Portfolio.js';
+import { ScrollTopFab } from 'components/scroll-top-fab';
 
 const App = () => {
   const { pathname } = useLocation();
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/contacts" element={<Home />} />
         <Route path="/links" element={<Links />} />
       </Routes>
+      <ScrollTopFab />
     </S.App>
   );
 };

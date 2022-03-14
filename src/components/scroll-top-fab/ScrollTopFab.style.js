@@ -14,7 +14,7 @@ export const Box = styled.button`
   height: 54px;
   border-radius: 50%;
   color: ${({ theme }) => theme.palette.common.white};
-  right: 40px;
+  right: 35px;
   bottom: 45px;
   cursor: pointer;
   font-size: 30px;
@@ -22,14 +22,17 @@ export const Box = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 1;
+  transition: 0.2s ease;
 
   :hover {
     backdrop-filter: blur(20px);
     background-color: rgba(255, 255, 255, 0.1);
   }
 
-  &.clicked {
-    top: -100px;
+  &.hidden {
+    bottom: 200px;
+    opacity: 0;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
