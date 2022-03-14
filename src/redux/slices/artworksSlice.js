@@ -2,13 +2,22 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { getDocs, collection } from '@firebase/firestore';
 import { db } from '../../firebase/config';
 
+const sortArtworks = (artworks) => {
+  return [...artworks].sort((a, b) => {
+    return Date.parse(b.createdAt) - Date.parse(a.createdAt);
+  });
+};
+
 export const getArtworks = createAsyncThunk(
   'artworks/getArtworks',
   async (_, thunkApi) => {
     try {
       const querySnapshot = await getDocs(collection(db, 'artworks'));
       const artworks = querySnapshot.docs.map((doc) => {
-        return { id: doc.id, ...doc.data() };
+        return {
+          ...doc.data(),
+          id: doc.id,
+        };
       });
 
       console.log(artworks);
@@ -29,15 +38,15 @@ export const artworksSlice = createSlice({
   name: 'artworks',
   initialState,
   extraReducers: {
-    [getArtworks.pending]: (state, { payload }) => {
+    [getArtworks.pending]: (state) => {
       state.error = null;
       state.isLoading = true;
     },
     [getArtworks.fulfilled]: (state, { payload }) => {
-      state.artworks = payload;
+      state.artworks = sortArtworks(payload);
       state.isLoading = false;
     },
-    [getArtworks.rejected]: (state, { payload }) => {
+    [getArtworks.rejected]: (state) => {
       state.isLoading = false;
     },
   },
