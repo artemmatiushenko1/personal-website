@@ -23,7 +23,6 @@ export const Text = styled.p`
   font-size: 16px;
   max-width: 900px;
   padding: 0px 80px;
-  font-family: ${({ theme }) => theme.typography.fonts.secondary};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
     padding: 0px 20px;
