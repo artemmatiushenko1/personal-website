@@ -22,12 +22,12 @@ const Intro = () => {
           <S.Description>
             photographer & digital artist <span>from Ukraine</span>
           </S.Description>
-          <S.ScrollToAboutButton
+          <S.AboutButton
             icon={<MouseIcon />}
             onClick={onMoreButtonClickHandler}
           >
             ABOUT ME
-          </S.ScrollToAboutButton>
+          </S.AboutButton>
         </S.IntroBox>
       </Container>
     </S.Section>

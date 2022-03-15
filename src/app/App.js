@@ -9,6 +9,7 @@ import { useMediaQuery } from 'react-responsive';
 import Links from 'pages/links/Links.js';
 import Portfolio from 'pages/portfolio/Portfolio.js';
 import { ScrollTopFab } from 'components/scroll-top-fab';
+import Contact from 'pages/contact/Contact.js';
 
 const App = () => {
   const { pathname } = useLocation();
@@ -25,7 +26,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/nft" element={<Home />} />
-        <Route path="/contacts" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/links" element={<Links />} />
       </Routes>
       <ScrollTopFab />

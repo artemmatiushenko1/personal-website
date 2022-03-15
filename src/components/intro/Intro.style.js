@@ -81,7 +81,8 @@ export const Section = styled.section`
   }
 `;
 
-export const ScrollToAboutButton = styled(RoundedButton)`
+export const AboutButton = styled(RoundedButton)`
+  margin-top: 70px;
   :hover {
     svg #wheel {
       transform: translateY(9px);

@@ -38,7 +38,7 @@ const Navigation = () => {
           <S.NavItem to="/nft" onClick={onNavItemSelected}>
             Nft
           </S.NavItem>
-          <S.NavItem to="/contacts" onClick={onNavItemSelected}>
+          <S.NavItem to="/contact" onClick={onNavItemSelected}>
             Contacts
           </S.NavItem>
           <S.NavItem to="/links" onClick={onNavItemSelected}>
