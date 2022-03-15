@@ -16,7 +16,8 @@ export const Section = styled.section`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
-    padding: 50px 15px 15px 15px;
+    padding: 80px 15px 15px 15px;
+    height: auto;
   }
 
   ${Container} {
