@@ -1,12 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { artworksReducer } from './slices/artworksSlice';
 import { createLogger } from 'redux-logger';
+import { contactReducer } from './slices/contactSlice';
 
 const logger = createLogger({ collapsed: true });
 
 export const store = configureStore({
   reducer: {
     artworks: artworksReducer,
+    contact: contactReducer,
   },
   middleware: (getDefaultMiddleware) => {
     const middlewares = getDefaultMiddleware();

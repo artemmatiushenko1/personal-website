@@ -12,10 +12,6 @@ export const Section = styled.section`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
-    padding: 40px 90px 0 90px;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
     padding: 80px 15px 15px 15px;
     height: auto;
   }
