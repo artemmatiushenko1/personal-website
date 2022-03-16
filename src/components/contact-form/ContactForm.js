@@ -1,90 +1,79 @@
 import * as S from './ContactForm.style';
 import { ReactComponent as SendIcon } from 'assets/icons/icon-send.svg';
-import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { sendEmail } from 'redux/slices/contactSlice';
 import { useSelector } from 'react-redux';
 import { isLoadingSelector } from 'redux/selectors/contact';
+import { useFormik } from 'formik';
+import validationSchema from './validationSchema';
+import { Input } from 'components/input';
 
 const ContactForm = () => {
-  const [fullName, setFullName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
   const dispatch = useDispatch();
   const isLoading = useSelector(isLoadingSelector);
-
-  const onSubmitHandler = (e) => {
-    e.preventDefault();
-
-    const templateParams = {
-      subject,
-      fullName,
-      email,
-      message,
-    };
-
-    dispatch(sendEmail(templateParams));
-  };
-
-  const onFullNameChangeHandler = (e) => {
-    setFullName(e.target.value);
-  };
-
-  const onEmailChangeHandler = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const onSubjectChangeHandler = (e) => {
-    setSubject(e.target.value);
-  };
-
-  const onMessageChangeHandler = (e) => {
-    setMessage(e.target.value);
-  };
+  const { values, handleChange, handleBlur, handleSubmit, errors, touched } =
+    useFormik({
+      initialValues: {
+        fullName: '',
+        email: '',
+        subject: '',
+        message: '',
+      },
+      validationSchema,
+      onSubmit: (values) => {
+        dispatch(sendEmail(values));
+      },
+    });
 
   return (
     <>
-      <S.Form onSubmit={onSubmitHandler}>
-        <div>
-          <S.Label htmlFor="input-full-name">Full name</S.Label>
-          <S.Input
-            id="input-full-name"
-            type="text"
-            placeholder="Full name"
-            value={fullName}
-            onChange={onFullNameChangeHandler}
-          />
-        </div>
-        <div>
-          <S.Label htmlFor="input-email">Your email</S.Label>
-          <S.Input
-            id="input-email"
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={onEmailChangeHandler}
-          />
-        </div>
-        <div>
-          <S.Label htmlFor="input-subject">Subject</S.Label>
-          <S.Input
-            id="input-subject"
-            type="text"
-            placeholder="Subject"
-            value={subject}
-            onChange={onSubjectChangeHandler}
-          />
-        </div>
-        <div>
-          <S.Label htmlFor="input-message">Message</S.Label>
-          <S.TextArea
-            id="input-message"
-            placeholder="Message"
-            value={message}
-            onChange={onMessageChangeHandler}
-          ></S.TextArea>
-        </div>
+      <S.Form onSubmit={handleSubmit}>
+        <Input
+          id="input-full-name"
+          label="Full name"
+          name="fullName"
+          placeholder="Full name"
+          value={values.fullName}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={touched.fullName && Boolean(errors.fullName)}
+          helperText={touched.fullName && errors.fullName}
+        />
+        <Input
+          id="input-email"
+          label="Email"
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={values.email}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={touched.email && Boolean(errors.email)}
+          helperText={touched.email && errors.email}
+        />
+        <Input
+          id="input-subject"
+          label="Subject"
+          name="subject"
+          placeholder="Subject"
+          value={values.subject}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={touched.subject && Boolean(errors.subject)}
+          helperText={touched.subject && errors.subject}
+        />
+        <Input
+          isTextArea={true}
+          id="input-message"
+          label="Message"
+          name="message"
+          placeholder="Message"
+          value={values.message}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={touched.message && Boolean(errors.message)}
+          helperText={touched.message && errors.message}
+        />
         <S.Wrapper>
           <S.SendButton
             type="submit"

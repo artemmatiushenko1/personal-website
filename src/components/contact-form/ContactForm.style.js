@@ -13,33 +13,6 @@ export const Form = styled.form`
   position: relative;
 `;
 
-export const Input = styled.input`
-  border: none;
-  outline: none;
-  padding: 10px 15px;
-  font-family: inherit;
-  font-size: 16px;
-  border-radius: 4px;
-  width: 100%;
-`;
-
-export const TextArea = styled.textarea`
-  border: none;
-  outline: none;
-  padding: 10px 15px;
-  font-family: inherit;
-  font-size: 16px;
-  border-radius: 4px;
-  width: 100%;
-  height: 150px;
-  resize: none;
-`;
-
-export const Label = styled.label`
-  display: block;
-  margin-bottom: 10px;
-`;
-
 export const SendButton = styled(RoundedButton)`
   background-color: #fff;
   text-transform: uppercase;
