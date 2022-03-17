@@ -59,12 +59,10 @@ export const Img = styled.img`
   margin: 0 auto;
   object-fit: cover;
   display: block;
-  transition: 0.2s;
   opacity: 0;
+  transition: opacity 1s ease-in-out;
 
   &.visible {
     opacity: 1;
   }
-
-  transition: opacity 1s ease-in-out;
 `;

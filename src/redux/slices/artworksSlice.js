@@ -1,12 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { getDocs, collection } from '@firebase/firestore';
 import { db } from '../../firebase/config';
-
-const sortArtworks = (artworks) => {
-  return [...artworks].sort((a, b) => {
-    return Date.parse(b.createdAt) - Date.parse(a.createdAt);
-  });
-};
+import { sortByDate } from 'utils/sortByDate';
 
 export const getArtworks = createAsyncThunk(
   'artworks/getArtworks',
@@ -20,7 +15,6 @@ export const getArtworks = createAsyncThunk(
         };
       });
 
-      console.log(artworks);
       return thunkApi.fulfillWithValue(artworks);
     } catch (err) {
       return thunkApi.rejectWithValue({ message: err.message });
@@ -43,7 +37,7 @@ export const artworksSlice = createSlice({
       state.isLoading = true;
     },
     [getArtworks.fulfilled]: (state, { payload }) => {
-      state.artworks = sortArtworks(payload);
+      state.artworks = sortByDate(payload);
       state.isLoading = false;
     },
     [getArtworks.rejected]: (state) => {
