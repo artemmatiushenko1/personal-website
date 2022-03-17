@@ -21,19 +21,6 @@ export const ImgContainer = styled.div`
   border-radius: 3px;
   overflow: hidden;
   position: relative;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    display: block;
-    transition: opacity 1s ease-in-out;
-
-    &.visible {
-      opacity: 1;
-    }
-  }
 `;
 
 export const Price = styled.div`

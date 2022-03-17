@@ -1,9 +1,8 @@
 import * as S from './NftCard.style';
-import { Placeholder } from 'components/placeholder';
-import { useRef } from 'react';
 import { ReactComponent as EthIcon } from 'assets/icons/icon-eth.svg';
 import { ReactComponent as FndLogo } from 'assets/icons/logo-foundation.svg';
 import { truncateString } from 'utils/truncateString';
+import { Image } from 'components/image';
 
 const NftCard = ({
   imgUrl,
@@ -15,18 +14,10 @@ const NftCard = ({
   url,
   edition,
 }) => {
-  const imgRef = useRef();
-  const placeholderRef = useRef();
-  const onImgLoad = () => {
-    imgRef.current.classList.toggle('visible');
-    placeholderRef.current.remove();
-  };
-
   return (
     <S.NftCard>
       <S.ImgContainer>
-        <Placeholder ref={placeholderRef} />
-        <img src={imgUrl} alt={title} onLoad={onImgLoad} ref={imgRef} />
+        <Image src={imgUrl} alt={title} />
       </S.ImgContainer>
       <div>
         <S.TitleWrapper>
