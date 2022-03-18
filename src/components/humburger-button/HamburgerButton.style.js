@@ -21,8 +21,8 @@ export const Box = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
-    width: 41px;
-    height: 41px;
+    width: 44px;
+    height: 44px;
   }
 `;
 
@@ -40,7 +40,7 @@ export const LineTop = styled(Line)`
     isActive ? 'translateY(-50%) rotate(45deg)' : null};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
-    top: ${({ isActive }) => (isActive ? '50%' : '9px')};
+    top: ${({ isActive }) => (isActive ? '50%' : '11px')};
   }
 `;
 
@@ -56,6 +56,6 @@ export const LineBottom = styled(Line)`
     isActive ? 'translateY(50%) rotate(-45deg)' : null};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
-    bottom: ${({ isActive }) => (isActive ? '50%' : '9px')};
+    bottom: ${({ isActive }) => (isActive ? '50%' : '11px')};
   }
 `;

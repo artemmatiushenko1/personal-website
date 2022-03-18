@@ -7,7 +7,7 @@ export const Logo = styled(LogoSvg)`
   width: auto;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
-    height: 18px;
+    height: 19px;
   }
 `;
 
