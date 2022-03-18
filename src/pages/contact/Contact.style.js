@@ -18,7 +18,7 @@ export const Section = styled.section`
 
   ${Container} {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     column-gap: 100px;
     height: 100%;
