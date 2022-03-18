@@ -38,4 +38,8 @@ export const Box = styled.button`
   @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
     right: 20px;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
+    bottom: 20px;
+  }
 `;

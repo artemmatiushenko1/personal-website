@@ -5,6 +5,10 @@ export const Section = styled.section`
   min-height: 100vh;
   height: 100vh;
   background-color: #202020;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    padding: 80px 10px 0 10px;
+  }
 `;
 
 export const Grid = styled.div`

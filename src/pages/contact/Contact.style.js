@@ -40,7 +40,7 @@ export const Text = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 50px;
+  font-size: 45px;
 `;
 
 export const Email = styled.p`

@@ -7,7 +7,7 @@ export const Section = styled.section`
   background-color: #202020;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
-    padding: 90px 10px 0 10px;
+    padding: 80px 10px 0 10px;
   }
 `;
 

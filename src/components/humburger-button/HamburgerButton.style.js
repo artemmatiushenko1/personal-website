@@ -19,6 +19,11 @@ export const Box = styled.div`
     align-items: center;
     position: relative;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    width: 41px;
+    height: 41px;
+  }
 `;
 
 export const Line = styled.span`
@@ -33,6 +38,10 @@ export const LineTop = styled(Line)`
   top: ${({ isActive }) => (isActive ? '50%' : '13px')};
   transform: ${({ isActive }) =>
     isActive ? 'translateY(-50%) rotate(45deg)' : null};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    top: ${({ isActive }) => (isActive ? '50%' : '9px')};
+  }
 `;
 
 export const LineMiddle = styled(Line)`
@@ -45,4 +54,8 @@ export const LineBottom = styled(Line)`
   bottom: ${({ isActive }) => (isActive ? '50%' : '13px')};
   transform: ${({ isActive }) =>
     isActive ? 'translateY(50%) rotate(-45deg)' : null};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    bottom: ${({ isActive }) => (isActive ? '50%' : '9px')};
+  }
 `;

@@ -5,6 +5,10 @@ import { ReactComponent as LogoSvg } from 'assets/images/logo.svg';
 export const Logo = styled(LogoSvg)`
   height: 20px;
   width: auto;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    height: 18px;
+  }
 `;
 
 export const NavContainer = styled.div`
@@ -23,6 +27,11 @@ export const NavContainer = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
     flex-direction: row-reverse;
     padding: 15px 15px 10px 15px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    flex-direction: row-reverse;
+    padding: 10px;
   }
 `;
 
