@@ -2,16 +2,16 @@ import styled from 'styled-components';
 import { ReactComponent as Arrow } from 'assets/icons/icon-arrow.svg';
 
 export const ArrowIcon = styled(Arrow)`
-  width: 24px;
+  width: 20px;
   height: auto;
 `;
 
 export const Box = styled.button`
   position: fixed;
-  background: none;
+  background-color: #202020;
   border: none;
-  width: 54px;
-  height: 54px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   color: ${({ theme }) => theme.palette.common.white};
   right: 35px;

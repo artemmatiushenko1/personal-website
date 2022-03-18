@@ -11,7 +11,7 @@ export const NftCard = styled.div`
   transition: transform 0.2s ease;
 
   :hover {
-    transform: translateY(-2px);
+    transform: translateY(-4px);
   }
 `;
 
