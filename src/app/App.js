@@ -26,7 +26,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/links" element={<Links />} />
       </Routes>
-      <ScrollTopFab />
+      {pathname !== '/contact' && <ScrollTopFab />}
     </S.App>
   );
 };
