@@ -69,7 +69,7 @@ const customStyles = {
   }),
 };
 
-const Select = ({ options, placeholder, value, onChange }) => {
+const Select = ({ options, placeholder, value, onChange, instanceId }) => {
   return (
     <ReactSelect
       placeholder={placeholder}
@@ -78,6 +78,7 @@ const Select = ({ options, placeholder, value, onChange }) => {
       options={options}
       isSearchable={false}
       styles={customStyles}
+      instanceId={instanceId}
     />
   );
 };

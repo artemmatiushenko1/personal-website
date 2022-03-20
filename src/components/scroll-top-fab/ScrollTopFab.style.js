@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ReactComponent as Arrow } from 'assets/icons/icon-arrow.svg';
+import Arrow from 'public/icons/icon-arrow.svg';
 
 export const ArrowIcon = styled(Arrow)`
   width: 20px;

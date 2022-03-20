@@ -1,7 +1,7 @@
-import personalPicture from 'assets/images/personal-picture.png';
+import personalPicture from 'public/images/personal-picture.png';
 import Container from 'components/container';
 import * as S from './Intro.style';
-import { ReactComponent as MouseIcon } from 'assets/icons/icon-mouse.svg';
+import MouseIcon from 'public/icons/icon-mouse.svg';
 
 const Intro = () => {
   const onMoreButtonClickHandler = () => {
@@ -13,7 +13,13 @@ const Intro = () => {
       <Container>
         <S.IntroBox>
           <S.PhotoWrapper>
-            <S.PersonalPhoto src={personalPicture} alt="Artem Matiushenko" />
+            <S.PersonalPhoto
+              src={personalPicture}
+              alt="Artem Matiushenko"
+              quality={100}
+              width={168}
+              height={168}
+            />
           </S.PhotoWrapper>
           <S.Title>
             <span>Artem </span>

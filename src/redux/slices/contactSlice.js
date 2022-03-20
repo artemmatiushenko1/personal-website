@@ -7,10 +7,10 @@ export const sendEmail = createAsyncThunk(
   async (emailTeamplate, thunkAPI) => {
     try {
       await emailjs.send(
-        process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
-        process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID,
         emailTeamplate,
-        process.env.REACT_APP_EMAIL_JS_USER_ID
+        process.env.NEXT_PUBLIC_EMAIL_JS_USER_ID
       );
     } catch (err) {
       return thunkAPI.rejectWithValue(err.message);

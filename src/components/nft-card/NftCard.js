@@ -1,6 +1,6 @@
 import * as S from './NftCard.style';
-import { ReactComponent as EthIcon } from 'assets/icons/icon-eth.svg';
-import { ReactComponent as FndLogo } from 'assets/icons/logo-foundation.svg';
+import EthIcon from 'public/icons/icon-eth.svg';
+import FndLogo from 'public/icons/logo-foundation.svg';
 import { truncateString } from 'utils/truncateString';
 import { Image } from 'components/image';
 
@@ -28,7 +28,7 @@ const NftCard = ({
       </div>
       <S.Details>
         <S.Price>
-          <EthIcon /> <span>{price} ETH</span>
+          <EthIcon width="24px" height="24px" /> <span>{price} ETH</span>
         </S.Price>
         <S.State sold={sold}>{sold ? 'Sold' : 'Available'}</S.State>
       </S.Details>

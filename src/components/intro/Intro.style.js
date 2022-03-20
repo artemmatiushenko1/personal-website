@@ -1,6 +1,7 @@
 import Container from 'components/container';
 import styled from 'styled-components';
 import { RoundedButton } from 'components/rounded-button';
+import Image from 'next/image';
 
 export const IntroBox = styled.div`
   display: flex;
@@ -24,7 +25,7 @@ export const PhotoWrapper = styled.div`
   }
 `;
 
-export const PersonalPhoto = styled.img`
+export const PersonalPhoto = styled(Image)`
   width: 100%;
   height: 100%;
 `;

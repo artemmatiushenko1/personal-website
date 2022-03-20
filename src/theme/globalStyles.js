@@ -27,7 +27,7 @@ const GlobalStyles = createGlobalStyle`
       text-rendering: optimizeLegibility;
     }
 
-    #root {
+    #__next {
       width: 100%;
       height: 100%;
     }

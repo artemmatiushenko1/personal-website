@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
-import { ReactComponent as LogoSvg } from 'assets/images/logo.svg';
+import Link from 'next/link';
+import LogoSvg from 'public/icons/logo.svg';
 
 export const Logo = styled(LogoSvg)`
-  height: 20px;
   width: auto;
+  height: 20px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
     height: 19px;
@@ -62,71 +62,5 @@ export const Nav = styled.nav`
     padding-left: 45px;
     padding-right: 0;
     transition: right 0.5s ease-in-out;
-  }
-`;
-
-export const NavItem = styled(NavLink)`
-  font-size: 14px;
-  text-transform: uppercase;
-  position: relative;
-  line-height: 23px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
-    font-size: 19px;
-    padding: 10px;
-  }
-
-  ::after {
-    content: '';
-    position: absolute;
-    background-color: ${({ theme }) => theme.palette.common.white};
-    transition: all 0.2s ease;
-    width: 0;
-    height: 2px;
-    left: 0;
-    bottom: -5px;
-    transition: all 0.2s ease-in-out;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
-      left: -17px;
-      bottom: 50%;
-      transform: translateY(50%);
-    }
-  }
-
-  :link,
-  :visited {
-    color: ${({ theme }) => theme.palette.common.white};
-    text-decoration: none;
-  }
-
-  :hover,
-  :active {
-    ::after {
-      width: 100%;
-
-      @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
-        left: -17px;
-        height: 80%;
-        width: 2px;
-      }
-    }
-  }
-
-  &.active {
-    ::after {
-      bottom: -5px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-
-      @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
-        left: -20px;
-        bottom: 50%;
-        transform: translateY(50%);
-      }
-    }
   }
 `;

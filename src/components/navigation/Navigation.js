@@ -3,10 +3,12 @@ import { HamburgerButton } from 'components/humburger-button';
 import { useMediaQuery } from 'react-responsive';
 import { ThemeContext } from 'styled-components';
 import { useContext, useState } from 'react';
+import NavLink from 'components/nav-link/NavLink';
+import useMedia from 'src/hooks/useMedia';
 
 const Navigation = () => {
   const { breakpoints } = useContext(ThemeContext);
-  const isTablet = useMediaQuery({
+  const isTablet = useMedia({
     query: `(max-width: ${breakpoints.medium})`,
   });
   const [isNavVisible, setIsNavVisible] = useState(false);
@@ -29,21 +31,21 @@ const Navigation = () => {
           <HamburgerButton isActive={isNavVisible} onClick={toggleHav} />
         ) : null}
         <S.Nav isVisible={isNavVisible}>
-          <S.NavItem to="/" onClick={onNavItemSelected}>
+          <NavLink href="/" onClick={onNavItemSelected}>
             Home
-          </S.NavItem>
-          <S.NavItem to="/portfolio" onClick={onNavItemSelected}>
+          </NavLink>
+          <NavLink href="/portfolio" onClick={onNavItemSelected}>
             Portfolio
-          </S.NavItem>
-          <S.NavItem to="/nft" onClick={onNavItemSelected}>
-            Nft
-          </S.NavItem>
-          <S.NavItem to="/contact" onClick={onNavItemSelected}>
-            Contacts
-          </S.NavItem>
-          <S.NavItem to="/links" onClick={onNavItemSelected}>
+          </NavLink>
+          <NavLink href="/nft" onClick={onNavItemSelected}>
+            NFT
+          </NavLink>
+          <NavLink href="/contact" onClick={onNavItemSelected}>
+            Contact
+          </NavLink>
+          <NavLink href="/links" onClick={onNavItemSelected}>
             Links
-          </S.NavItem>
+          </NavLink>
         </S.Nav>
       </S.NavContainer>
     </S.ActionBar>

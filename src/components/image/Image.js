@@ -1,21 +1,29 @@
 import { Placeholder } from 'components/placeholder';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import * as S from './Image.style';
 
 const Image = ({ src, alt }) => {
   const placeholderRef = useRef();
-  const imgRef = useRef();
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  const onImgLoadHandler = () => {
-    imgRef.current.classList.toggle('visible');
+  const onImgLoadHandler = (e) => {
+    setIsLoaded(true);
     placeholderRef.current.remove();
   };
 
   return (
-    <S.LazyLoadContainer once>
+    <>
       <Placeholder ref={placeholderRef} />
-      <S.Img ref={imgRef} src={src} alt={alt} onLoad={onImgLoadHandler} />
-    </S.LazyLoadContainer>
+      <S.Img
+        src={src}
+        alt={alt}
+        onLoadingComplete={onImgLoadHandler}
+        className={isLoaded ? 'visible' : null}
+        layout="fill"
+        loading="lazy"
+        quality={100}
+      />
+    </>
   );
 };
 

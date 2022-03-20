@@ -1,7 +1,8 @@
 import LazyLoad from 'react-lazyload';
 import styled from 'styled-components';
+import Image from 'next/image';
 
-export const Img = styled.img`
+export const Img = styled(Image)`
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -12,11 +13,5 @@ export const Img = styled.img`
 
   &.visible {
     opacity: 1;
-  }
-`;
-
-export const LazyLoadContainer = styled(LazyLoad)`
-  &.lazyload-wrapper {
-    height: 100%;
   }
 `;

@@ -17,6 +17,7 @@ export const Overlay = styled.div`
   left: 10px;
   background-color: rgba(255, 255, 255, 1);
   transition: transform 0.2s ease;
+  z-index: 100;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
     height: 20px;

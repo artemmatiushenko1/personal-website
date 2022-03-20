@@ -1,5 +1,5 @@
 import * as S from './ContactForm.style';
-import { ReactComponent as SendIcon } from 'assets/icons/icon-send.svg';
+import SendIcon from 'public/icons/icon-send.svg';
 import { useDispatch } from 'react-redux';
 import { sendEmail } from 'redux/slices/contactSlice';
 import { useSelector } from 'react-redux';

@@ -1,3 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# Host
+Host: https://artem-matiushenko.com
+
+# Sitemaps
+Sitemap: https://artem-matiushenko.com/sitemap.xml

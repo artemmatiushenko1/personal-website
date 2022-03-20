@@ -1,14 +1,13 @@
 import Container from 'components/container';
-import React from 'react';
 import * as S from './About.style';
-import { ReactComponent as ExploreIcon } from 'assets/icons/icon-compass.svg';
-import { useNavigate } from 'react-router';
+import ExploreIcon from 'public/icons/icon-compass.svg';
+import { useRouter } from 'next/router';
 import { Footer } from 'components/footer';
 
 const About = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const onExploreButtonClickHandler = () => {
-    navigate('/portfolio');
+    router.push('/portfolio');
   };
 
   return (

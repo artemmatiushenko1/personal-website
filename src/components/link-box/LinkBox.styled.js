@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Image from 'next/image';
 
 export const Box = styled.div`
   display: inline-block;
@@ -19,7 +20,7 @@ export const Link = styled.a`
   column-gap: 20px;
 `;
 
-export const Img = styled.img`
+export const Img = styled(Image)`
   width: 43px;
   height: 43px;
   border-radius: 50%;

@@ -1,15 +1,15 @@
 import { IconButton } from 'components/icon-button';
-import { ReactComponent as TwitterIcon } from 'assets/icons/icon-twitter.svg';
-import { ReactComponent as InstagramIcon } from 'assets/icons/icon-instagram.svg';
-import { ReactComponent as TikTokIcon } from 'assets/icons/icon-tiktok.svg';
-import { ReactComponent as YouTubeIcon } from 'assets/icons/icon-youtube.svg';
+import TwitterIcon from 'public/icons/icon-twitter.svg';
+import InstagramIcon from 'public/icons/icon-instagram.svg';
+import TikTokIcon from 'public/icons/icon-tiktok.svg';
+import YouTubeIcon from 'public/icons/icon-youtube.svg';
 import * as S from './Socials.style';
 
 const LINKS = [
   {
     name: 'twitter',
     link: 'https://twitter.com/_artemko',
-    icon: <TwitterIcon />,
+    icon: <TwitterIcon alt="twitter" />,
   },
   {
     name: 'instagram',
