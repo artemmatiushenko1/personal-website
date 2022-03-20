@@ -22,6 +22,7 @@ const Image = ({ src, alt }) => {
         layout="fill"
         loading="lazy"
         quality={100}
+        unoptimized={true}
       />
     </>
   );
