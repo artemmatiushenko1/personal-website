@@ -1,15 +1,24 @@
 import { useState, useEffect } from 'react';
-import { useMediaQuery } from 'react-responsive';
 
-const useMedia = (query) => {
-  const isGivenSize = useMediaQuery(query);
-  const [value, setValue] = useState(false);
+const useMediaQuery = (query) => {
+  const [matches, setMatches] = useState(false);
 
   useEffect(() => {
-    setValue(isGivenSize);
-  }, [isGivenSize]);
+    const media = window.matchMedia(query);
+    if (media.matches) {
+      setMatches(media.matches);
+    }
 
-  return value;
+    const onChange = (e) => {
+      setMatches(e.matches);
+    };
+
+    media.onchange = onChange;
+
+    return media.removeEventListener('change', onChange);
+  }, [query]);
+
+  return matches;
 };
 
-export default useMedia;
+export default useMediaQuery;

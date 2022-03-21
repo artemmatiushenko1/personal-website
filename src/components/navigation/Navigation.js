@@ -1,16 +1,13 @@
 import * as S from './Navigation.style';
 import { HamburgerButton } from 'components/humburger-button';
-import { useMediaQuery } from 'react-responsive';
 import { ThemeContext } from 'styled-components';
 import { useContext, useState } from 'react';
 import NavLink from 'components/nav-link/NavLink';
-import useMedia from 'src/hooks/useMedia';
+import useMediaQuery from 'src/hooks/useMedia';
 
 const Navigation = () => {
   const { breakpoints } = useContext(ThemeContext);
-  const isTablet = useMedia({
-    query: `(max-width: ${breakpoints.medium})`,
-  });
+  const isTablet = useMediaQuery(`(max-width: ${breakpoints.medium})`);
   const [isNavVisible, setIsNavVisible] = useState(false);
 
   const toggleHav = () => {
