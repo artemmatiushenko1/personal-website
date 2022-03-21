@@ -34,12 +34,6 @@ const SRLOptions = {
   },
 };
 
-const masonryGridBreakpoints = {
-  default: 4,
-  1100: 3,
-  900: 2,
-};
-
 const categoriesOptions = [
   { value: 'art', label: 'art' },
   { value: 'portrait', label: 'portrait' },
@@ -127,15 +121,11 @@ const Portfolio = ({ artworks }) => {
                 <RestoreIcon />
               </S.ButtonResetFilter>
             </S.SelectsWrapper>
-            <S.MasonryGrid
-              breakpointCols={masonryGridBreakpoints}
-              className="my-masonry-grid"
-              columnClassName="my-masonry-grid_column"
-            >
+            <S.Grid>
               {filteredArtworks.map(({ imgUrl, id, year, name }) => {
                 return <Photo key={id} src={imgUrl} alt={name} year={year} />;
               })}
-            </S.MasonryGrid>
+            </S.Grid>
           </SRLWrapper>
         </Container>
         {filtersTouched && filteredArtworks.length === 0 ? (

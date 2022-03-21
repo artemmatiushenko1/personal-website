@@ -11,32 +11,21 @@ export const Section = styled(BaseSection)`
   }
 `;
 
-export const MasonryGrid = styled(Masonry)`
-  &.my-masonry-grid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: auto;
+export const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .my-masonry-grid_column {
-    background-clip: padding-box;
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .my-masonry-grid_column:not(:first-child) {
-    padding-left: 20px;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
-      padding-left: 10px;
-    }
-  }
-
-  .my-masonry-grid_column > div {
-    margin-bottom: 20px;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
-      margin-bottom: 10px;
-    }
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    gap: 10px;
   }
 `;
 
