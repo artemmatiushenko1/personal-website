@@ -5,7 +5,7 @@ import { ThemeContext } from 'styled-components';
 import { useContext } from 'react';
 import { ScrollTopFab } from 'components/scroll-top-fab';
 import { useRouter } from 'next/router';
-import useMediaQuery from 'src/hooks/useMedia.js';
+import useMediaQuery from 'src/hooks/useMediaQuery.js';
 
 const Layout = ({ children }) => {
   const { pathname } = useRouter();

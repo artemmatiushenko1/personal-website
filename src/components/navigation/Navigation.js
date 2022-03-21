@@ -3,7 +3,7 @@ import { HamburgerButton } from 'components/humburger-button';
 import { ThemeContext } from 'styled-components';
 import { useContext, useState } from 'react';
 import NavLink from 'components/nav-link/NavLink';
-import useMediaQuery from 'src/hooks/useMedia';
+import useMediaQuery from 'src/hooks/useMediaQuery';
 
 const Navigation = () => {
   const { breakpoints } = useContext(ThemeContext);
