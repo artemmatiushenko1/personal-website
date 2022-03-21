@@ -60,7 +60,7 @@ const Nft = ({ nfts }) => {
   );
 };
 
-export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
   const querySnapshot = await getDocs(collection(db, 'nfts'));
   const nfts = querySnapshot.docs.map((doc) => {
     return {

@@ -147,7 +147,7 @@ const Portfolio = ({ artworks }) => {
   );
 };
 
-export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
   const querySnapshot = await getDocs(collection(db, 'artworks'));
   const artworks = querySnapshot.docs.map((doc) => {
     return {
