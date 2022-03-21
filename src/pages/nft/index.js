@@ -1,9 +1,8 @@
 import * as S from 'src/styles/pages/Nft.style';
 import Container from 'components/container';
 import { NftCard } from 'components/nft-card';
-import { getDocs, collection } from '@firebase/firestore';
-import { db } from 'src/firebase/config';
 import Head from 'next/head';
+import { getFirestoreRecords } from 'lib/api';
 
 const Nft = ({ nfts }) => {
   return (
@@ -61,13 +60,7 @@ const Nft = ({ nfts }) => {
 };
 
 export const getStaticProps = async (context) => {
-  const querySnapshot = await getDocs(collection(db, 'nfts'));
-  const nfts = querySnapshot.docs.map((doc) => {
-    return {
-      ...doc.data(),
-      id: doc.id,
-    };
-  });
+  const nfts = await getFirestoreRecords('nfts');
 
   return {
     props: { nfts },
