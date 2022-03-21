@@ -14,6 +14,7 @@ export default class MyDocument extends Document {
         });
 
       const initialProps = await Document.getInitialProps(ctx);
+
       return {
         ...initialProps,
         styles: (
@@ -27,10 +28,15 @@ export default class MyDocument extends Document {
       sheet.seal();
     }
   }
+
   render() {
     return (
       <Html lang="en">
         <Head>
+          <link rel="icon" href="/favicon.ico" />
+          <meta name="theme-color" content="#202020" />
+          <link rel="apple-touch-icon" href="/logo192.png" />
+          <meta property="og:image" content="/website-preview.png" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"

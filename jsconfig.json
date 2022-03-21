@@ -4,7 +4,8 @@
     "paths": {
       "components/*": ["src/components/*"],
       "utils/*": ["src/utils/*"],
-      "redux/*": ["src/redux/*"]
+      "redux/*": ["src/redux/*"],
+      "theme/*": ["src/theme/*"]
     }
   }
 }
