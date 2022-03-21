@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import Image from 'next/image';
+import { rgba } from 'polished';
 
 export const Box = styled.div`
   display: inline-block;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: ${({ theme }) => rgba(theme.palette.common.white, 0.4)};
   border-radius: 100px;
   padding: 10px;
   transition: transform 0.2s ease;
@@ -25,8 +26,6 @@ export const Img = styled(Image)`
   height: 43px;
   border-radius: 50%;
 `;
-
-export const Text = styled.div``;
 
 export const Title = styled.h2`
   color: ${({ theme }) => theme.palette.common.white};

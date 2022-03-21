@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import LogoSvg from 'public/icons/logo.svg';
+import { rgba } from 'polished';
 
 export const Logo = styled(LogoSvg)`
   width: auto;
@@ -42,7 +43,7 @@ export const ActionBar = styled.div`
   top: 0;
   z-index: 100;
   width: 100%;
-  background-color: #202020;
+  background-color: ${({ theme }) => theme.palette.primary.main};
 `;
 
 export const Nav = styled.nav`
@@ -56,7 +57,7 @@ export const Nav = styled.nav`
     right: ${({ isVisible }) => (isVisible ? '0' : '-100%')};
     top: 0;
     flex-direction: column;
-    background-color: rgba(32, 32, 32, 0.7);
+    background-color: ${({ theme }) => rgba(theme.palette.primary.main, 0.7)};
     backdrop-filter: blur(20px);
     padding: 30px;
     padding-left: 45px;

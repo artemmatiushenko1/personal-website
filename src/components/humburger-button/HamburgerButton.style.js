@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Box = styled.div`
   width: 46px;
   height: 46px;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.palette.common.white};
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -30,7 +30,7 @@ export const Line = styled.span`
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #000;
+  background-color: ${({ theme }) => theme.palette.common.black};
   transition: all 0.5s;
 `;
 

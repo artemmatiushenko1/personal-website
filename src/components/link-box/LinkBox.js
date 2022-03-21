@@ -5,10 +5,10 @@ const LinkBox = ({ title, desc, img, url }) => {
     <S.Box>
       <S.Link href={url} target="_blank">
         <S.Img src={img} alt={title} quality={100} />
-        <S.Text>
+        <div>
           <S.Title>{title}</S.Title>
           <S.Desc>{desc}</S.Desc>
-        </S.Text>
+        </div>
       </S.Link>
     </S.Box>
   );

@@ -1,7 +1,8 @@
+import { rgba } from 'polished';
 import styled from 'styled-components';
 
 export const NftCard = styled.div`
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: ${({ theme }) => rgba(theme.palette.common.white, 0.05)};
   border-radius: 5px;
   padding: 15px;
   max-width: 300px;
@@ -28,7 +29,7 @@ export const Price = styled.div`
   align-items: center;
 
   svg path {
-    fill: #fff;
+    fill: ${({ theme }) => theme.palette.common.white};
   }
 `;
 
@@ -38,7 +39,7 @@ export const State = styled.div`
 
 export const Desc = styled.p`
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
+  color: ${({ theme }) => rgba(theme.palette.common.white, 0.5)};
 `;
 
 export const Details = styled.div`
@@ -49,7 +50,7 @@ export const Details = styled.div`
 export const Divider = styled.div`
   width: 100%;
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: ${({ theme }) => rgba(theme.palette.common.white, 0.1)};
   border-radius: 10px;
 `;
 
@@ -70,12 +71,11 @@ export const Platform = styled.div`
 `;
 
 export const ViewNFTButton = styled.a`
-  background-color: rgba(255, 255, 255, 1);
+  background-color: ${({ theme }) => theme.palette.common.white};
   backdrop-filter: blur(15px);
   border-radius: 200px;
   border: none;
   font-family: ${({ theme }) => theme.typography.fonts.primary}, monospace;
-  color: ${({ theme }) => theme.palette.common.white};
   display: flex;
   align-items: center;
   padding: 8px 20px;
@@ -87,12 +87,12 @@ export const ViewNFTButton = styled.a`
 
   :link,
   :visited {
-    color: #202020;
+    color: ${({ theme }) => theme.palette.primary.main};
   }
 
   :hover {
-    background-color: #000;
-    color: #fff;
+    background-color: ${({ theme }) => theme.palette.common.black};
+    color: ${({ theme }) => theme.palette.common.white};
   }
 
   :active {
@@ -107,6 +107,6 @@ export const TitleWrapper = styled.div`
 `;
 
 export const Edition = styled.p`
-  color: rgba(255, 255, 255, 0.5);
+  color: ${({ theme }) => rgba(theme.palette.common.white, 0.5)};
   font-size: 13px;
 `;

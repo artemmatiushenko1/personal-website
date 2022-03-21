@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { rgba } from 'polished';
 
 export const PlaceholderContainer = styled.div`
   position: absolute;
@@ -10,7 +11,7 @@ export const PlaceholderContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: ${({ theme }) => rgba(theme.palette.common.white, 0.1)};
   border-radius: 5px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {

@@ -4,7 +4,7 @@ import Container from 'components/container';
 
 export const Section = styled.section`
   position: relative;
-  background-color: #202020;
+  background-color: ${({ theme }) => theme.palette.primary.main};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@ export const Section = styled.section`
 `;
 
 export const Text = styled.p`
-  color: #fff;
+  color: ${({ theme }) => theme.palette.primary.contrastText};
   font-size: 16px;
   max-width: 900px;
   padding: 0px 80px;
@@ -36,8 +36,8 @@ export const Text = styled.p`
 
 export const ExploreButton = styled(RoundedButton)`
   font-size: 16px;
-  background-color: #fff;
-  color: #000;
+  background-color: ${({ theme }) => theme.palette.common.white};
+  color: ${({ theme }) => theme.palette.common.black};
   align-self: center;
   margin-top: 40px;
 

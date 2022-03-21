@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { rgba } from 'polished';
 
 export const Button = styled.button`
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: ${({ theme }) => rgba(theme.palette.common.white, 0.3)};
   backdrop-filter: blur(15px);
   border-radius: 200px;
   border: none;

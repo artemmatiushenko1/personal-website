@@ -1,10 +1,11 @@
 import { RoundedButton } from 'components/rounded-button';
 import styled from 'styled-components';
+import { rgba } from 'polished';
 
 export const Form = styled.form`
   max-width: 540px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: ${({ theme }) => rgba(theme.palette.common.white, 0.1)};
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -14,7 +15,7 @@ export const Form = styled.form`
 `;
 
 export const SendButton = styled(RoundedButton)`
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.palette.common.white};
   text-transform: uppercase;
   color: #202020;
   justify-content: center;

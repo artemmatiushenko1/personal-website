@@ -17,7 +17,7 @@ export const LabelsWrapper = styled.div`
 `;
 
 export const HelpreText = styled.label`
-  color: #d35400;
+  color: ${({ theme }) => theme.palette.error.main};
   font-size: 14px;
   animation: ${fadeInAnimation} 0.2s ease;
 `;

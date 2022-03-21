@@ -13,7 +13,7 @@ export const Overlay = styled.div`
 `;
 
 export const Box = styled.div`
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.palette.common.white};
   border-radius: 50%;
   display: flex;
   align-items: center;

@@ -72,7 +72,7 @@ export const Description = styled.p`
 `;
 
 export const Section = styled.section`
-  background-color: #202020;
+  background-color: ${({ theme }) => theme.palette.primary.main};
   max-height: 100vh;
   height: 100vh;
   position: relative;

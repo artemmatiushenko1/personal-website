@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { rgba } from 'polished';
 
 export const Button = styled.a`
   background-color: transparent;
@@ -19,7 +20,7 @@ export const Button = styled.a`
   }
 
   :hover {
-    background: rgba(255, 255, 255, 0.35);
+    background: ${({ theme }) => rgba(theme.palette.common.white, 0.35)};
     backdrop-filter: blur(10px);
 
     svg {

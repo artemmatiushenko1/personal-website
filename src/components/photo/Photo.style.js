@@ -15,7 +15,7 @@ export const Overlay = styled.div`
   transform: translateY(100%);
   opacity: 0;
   left: 10px;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: ${({ theme }) => theme.palette.common.white};
   transition: transform 0.2s ease;
   z-index: 100;
 

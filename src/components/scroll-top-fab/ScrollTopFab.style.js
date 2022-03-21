@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Arrow from 'public/icons/icon-arrow.svg';
+import { rgba } from 'polished';
 
 export const ArrowIcon = styled(Arrow)`
   width: 20px;
@@ -8,7 +9,7 @@ export const ArrowIcon = styled(Arrow)`
 
 export const Box = styled.button`
   position: fixed;
-  background-color: #202020;
+  background-color: ${({ theme }) => theme.palette.primary.main};
   border: none;
   width: 45px;
   height: 45px;
@@ -27,7 +28,7 @@ export const Box = styled.button`
 
   :hover {
     backdrop-filter: blur(20px);
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: ${({ theme }) => rgba(theme.palette.common.white, 0.1)};
   }
 
   &.hidden {
