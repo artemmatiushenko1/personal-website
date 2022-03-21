@@ -6,6 +6,7 @@ import logoYouTube from 'public/images/logo-youtube.png';
 import logoFilterGrade from 'public/images/logo-fg.png';
 import logoTwitter from 'public/images/logo-twitter.png';
 import LinkBox from 'components/link-box/LinkBox';
+import Head from 'next/head';
 
 const links = [
   {
@@ -42,23 +43,43 @@ const links = [
 
 const Links = () => {
   return (
-    <S.Section>
-      <Container>
-        <S.Grid>
-          {links.map(({ title, desc, url, img }) => {
-            return (
-              <LinkBox
-                key={title}
-                img={img}
-                title={title}
-                desc={desc}
-                url={url}
-              />
-            );
-          })}
-        </S.Grid>
-      </Container>
-    </S.Section>
+    <>
+      <Head>
+        <meta
+          name="description"
+          content="Useful social media links (instagram, twitter, youtube, tiktok), nft, lightroom presets and other resourses by Artem Matiushenko"
+        />
+        <meta
+          name="keywords"
+          content="Artem Matiushenko, artemko, Ukraine, photographer, portfolio, артем матюшенко, nft, links, social media, presets"
+        />
+        <meta name="author" content="Artem Matiushenko" />
+        <meta property="og:title" content="Links - Artem Matiushenko" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:description"
+          content="Useful social media links (instagram, twitter, youtube, tiktok), nft, lightroom presets and other resourses by Artem Matiushenko"
+        />
+        <title>Links - Artem Matiushenko</title>
+      </Head>
+      <S.Section>
+        <Container>
+          <S.Grid>
+            {links.map(({ title, desc, url, img }) => {
+              return (
+                <LinkBox
+                  key={title}
+                  img={img}
+                  title={title}
+                  desc={desc}
+                  url={url}
+                />
+              );
+            })}
+          </S.Grid>
+        </Container>
+      </S.Section>
+    </>
   );
 };
 

@@ -8,6 +8,7 @@ import { Select } from 'components/select';
 import { getDocs, collection } from '@firebase/firestore';
 import { db } from 'src/firebase/config';
 import { sortByDate } from 'utils/sortByDate';
+import Head from 'next/head';
 
 const filterArtworks = ({ year, category }, artworks) => {
   return artworks.filter((artwork) => {
@@ -86,43 +87,63 @@ const Portfolio = ({ artworks }) => {
   };
 
   return (
-    <S.Section>
-      <Container>
-        <SRLWrapper options={SRLOptions}>
-          <S.SelectsWrapper>
-            <Select
-              options={yearOptions}
-              placeholder="Year"
-              value={year}
-              onChange={onYearChangeHandler}
-              instanceId="year-select"
-            />
-            <Select
-              options={categoriesOptions}
-              placeholder="Type"
-              value={category}
-              onChange={onCategoryChangeHandler}
-              instanceId="type-select"
-            />
-            <S.ButtonResetFilter onClick={onResetFilterClickHandler}>
-              <RestoreIcon />
-            </S.ButtonResetFilter>
-          </S.SelectsWrapper>
-          <S.MasonryGrid
-            breakpointCols={masonryGridBreakpoints}
-            className="my-masonry-grid"
-            columnClassName="my-masonry-grid_column"
-          >
-            {filteredArtworks.map(({ imgUrl, id, year, name }) => {
-              return <Photo key={id} src={imgUrl} alt={name} year={year} />;
-            })}
-          </S.MasonryGrid>
-        </SRLWrapper>
-      </Container>
-      {filtersTouched && filteredArtworks.length === 0 ? (
-        <S.FilterMessage>Nothing was found 🙃</S.FilterMessage>
-      ) : null}
-    </S.Section>
+    <>
+      <Head>
+        <meta
+          name="description"
+          content={`Gallery of photo artworks created during 2018 and ${new Date().getFullYear()} years by Artem Matiushenko`}
+        />
+        <meta
+          name="keywords"
+          content="Artem Matiushenko, artemko, Ukraine, photographer, portfolio, артем матюшенко, artworks, photo, photography, gallery"
+        />
+        <meta name="author" content="Artem Matiushenko" />
+        <meta property="og:title" content="Portfolio - Artem Matiushenko" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:description"
+          content={`Gallery of photo artworks created during 2018 and ${new Date().getFullYear()} years by Artem Matiushenko`}
+        />
+        <title>Portfolio - Artem Matiushenko</title>
+      </Head>
+      <S.Section>
+        <Container>
+          <SRLWrapper options={SRLOptions}>
+            <S.SelectsWrapper>
+              <Select
+                options={yearOptions}
+                placeholder="Year"
+                value={year}
+                onChange={onYearChangeHandler}
+                instanceId="year-select"
+              />
+              <Select
+                options={categoriesOptions}
+                placeholder="Type"
+                value={category}
+                onChange={onCategoryChangeHandler}
+                instanceId="type-select"
+              />
+              <S.ButtonResetFilter onClick={onResetFilterClickHandler}>
+                <RestoreIcon />
+              </S.ButtonResetFilter>
+            </S.SelectsWrapper>
+            <S.MasonryGrid
+              breakpointCols={masonryGridBreakpoints}
+              className="my-masonry-grid"
+              columnClassName="my-masonry-grid_column"
+            >
+              {filteredArtworks.map(({ imgUrl, id, year, name }) => {
+                return <Photo key={id} src={imgUrl} alt={name} year={year} />;
+              })}
+            </S.MasonryGrid>
+          </SRLWrapper>
+        </Container>
+        {filtersTouched && filteredArtworks.length === 0 ? (
+          <S.FilterMessage>Nothing was found 🙃</S.FilterMessage>
+        ) : null}
+      </S.Section>
+    </>
   );
 };
 

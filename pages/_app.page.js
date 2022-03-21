@@ -13,17 +13,8 @@ const App = ({ Component, pageProps }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <link rel="apple-touch-icon" href="/logo192.png" />
-        <meta
-          name="description"
-          content="Artem Matiushenko (ARTEMKO) - art photographer from Ukraine. Portfolio website 🌻"
-        />
-        <meta
-          name="keywords"
-          content="Artem Matiushenko, artemko, Ukraine, photographer, art, portfolio, artist, Matiushenko, photo"
-        />
         <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
-        <meta name="author" content="Artem Matiushenko" />
-        <title>Artem Matiushenko</title>
+        <meta property="og:image" content="/website-preview.png" />
       </Head>
       <Provider store={store}>
         <ThemeConfig>
