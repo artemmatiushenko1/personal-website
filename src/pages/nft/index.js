@@ -1,4 +1,4 @@
-import * as S from './index.style';
+import * as S from 'src/styles/pages/Nft.style';
 import Container from 'components/container';
 import { NftCard } from 'components/nft-card';
 import { getDocs, collection } from '@firebase/firestore';

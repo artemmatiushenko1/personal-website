@@ -5,7 +5,8 @@
       "components/*": ["src/components/*"],
       "utils/*": ["src/utils/*"],
       "redux/*": ["src/redux/*"],
-      "theme/*": ["src/theme/*"]
+      "theme/*": ["src/theme/*"],
+      "styles/*": ["src/styles/*"]
     }
   }
 }

@@ -1,5 +1,5 @@
 import Container from 'components/container';
-import * as S from './index.style';
+import * as S from 'src/styles/pages/Links.style';
 import logoFoundation from 'public/images/logo-foundation.png';
 import logoInstagram from 'public/images/logo-instagram.png';
 import logoYouTube from 'public/images/logo-youtube.png';

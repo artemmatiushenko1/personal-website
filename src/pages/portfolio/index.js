@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import * as S from './index.style';
+import * as S from 'src/styles/pages/Portfolio.style';
 import Container from 'components/container';
 import { SRLWrapper } from 'simple-react-lightbox';
 import { Photo } from 'components/photo';

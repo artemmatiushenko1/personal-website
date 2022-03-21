@@ -1,7 +1,7 @@
 import { ContactForm } from 'components/contact-form';
 import Container from 'components/container';
 import Head from 'next/head';
-import * as S from './index.style';
+import * as S from 'src/styles/pages/Contact.style';
 
 const Contact = () => {
   return (

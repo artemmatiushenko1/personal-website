@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import breakpoints from './breakpoints';
-import GlobalStyles from './globalStyles';
+import GlobalStyles from 'styles/globalStyles';
 import palette from './palette';
 import typography from './typography';
 

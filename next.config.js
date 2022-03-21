@@ -4,7 +4,6 @@ module.exports = {
     domains: ['firebasestorage.googleapis.com'],
     minimumCacheTTL: 31536000,
   },
-  pageExtensions: ['page.js'],
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
