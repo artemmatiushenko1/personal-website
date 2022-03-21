@@ -2,6 +2,15 @@ import Container from 'components/container';
 import styled from 'styled-components';
 import { RoundedButton } from 'components/rounded-button';
 import Image from 'next/image';
+import { Section as BaseSection } from 'components/section';
+
+export const Section = styled(BaseSection)`
+  height: 100vh;
+
+  ${Container} {
+    height: 100%;
+  }
+`;
 
 export const IntroBox = styled.div`
   display: flex;
@@ -68,17 +77,6 @@ export const Description = styled.p`
     span {
       display: block;
     }
-  }
-`;
-
-export const Section = styled.section`
-  background-color: ${({ theme }) => theme.palette.primary.main};
-  max-height: 100vh;
-  height: 100vh;
-  position: relative;
-
-  ${Container} {
-    height: 100%;
   }
 `;
 

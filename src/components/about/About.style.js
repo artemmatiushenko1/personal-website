@@ -1,15 +1,10 @@
 import styled from 'styled-components';
 import { RoundedButton } from 'components/rounded-button';
 import Container from 'components/container';
+import { Section as BaseSection } from 'components/section';
 
-export const Section = styled.section`
-  position: relative;
-  background-color: ${({ theme }) => theme.palette.primary.main};
-  display: flex;
-  justify-content: center;
-  align-items: center;
+export const Section = styled(BaseSection)`
   padding: 95px 0 0 0;
-  min-height: 100vh;
 
   ${Container} {
     display: flex;
@@ -23,6 +18,7 @@ export const Text = styled.p`
   font-size: 16px;
   max-width: 900px;
   padding: 0px 80px;
+  margin: 0 auto;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
     padding: 0px 20px;

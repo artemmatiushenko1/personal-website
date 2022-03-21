@@ -1,10 +1,8 @@
 import styled from 'styled-components';
+import { Section as BaseSection } from 'components/section';
 
-export const Section = styled.section`
+export const Section = styled(BaseSection)`
   padding: 120px 20px 0 20px;
-  min-height: 100vh;
-  height: 100vh;
-  background-color: ${({ theme }) => theme.palette.primary.main};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
     padding: 80px 10px 0 10px;

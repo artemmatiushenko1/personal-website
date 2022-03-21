@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 import Container from 'components/container';
+import { Section as BaseSection } from 'components/section';
 
-export const Section = styled.section`
+export const Section = styled(BaseSection)`
   padding: 40px 100px 0 60px;
-  min-height: 100vh;
   height: 100%;
-  background-color: ${({ theme }) => theme.palette.primary.main};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
     padding: 40px 90px 0 50px;
