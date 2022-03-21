@@ -1,16 +1,13 @@
 import * as S from './ContactForm.style';
 import SendIcon from 'public/icons/icon-send.svg';
-import { useDispatch } from 'react-redux';
-import { sendEmail } from 'redux/slices/contactSlice';
-import { useSelector } from 'react-redux';
-import { isLoadingSelector } from 'redux/selectors/contact';
 import { useFormik } from 'formik';
 import validationSchema from './validationSchema';
 import { Input } from 'components/input';
+import { sendEmail } from 'lib/api';
+import { useState } from 'react';
 
 const ContactForm = () => {
-  const dispatch = useDispatch();
-  const isLoading = useSelector(isLoadingSelector);
+  const [isSending, setIsSending] = useState(false);
   const { values, handleChange, handleBlur, handleSubmit, errors, touched } =
     useFormik({
       initialValues: {
@@ -20,8 +17,10 @@ const ContactForm = () => {
         message: '',
       },
       validationSchema,
-      onSubmit: (values) => {
-        dispatch(sendEmail(values));
+      onSubmit: async (values) => {
+        setIsSending(true);
+        await sendEmail(values);
+        setIsSending(false);
       },
     });
 
@@ -78,7 +77,7 @@ const ContactForm = () => {
           <S.SendButton
             type="submit"
             icon={<SendIcon />}
-            className={isLoading ? 'pressed' : null}
+            className={isSending ? 'pressed' : null}
           >
             <div>Send</div>
           </S.SendButton>

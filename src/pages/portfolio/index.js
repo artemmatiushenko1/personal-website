@@ -5,10 +5,9 @@ import { SRLWrapper } from 'simple-react-lightbox';
 import { Photo } from 'components/photo';
 import RestoreIcon from 'public/icons/icon-restore.svg';
 import { Select } from 'components/select';
-import { getDocs, collection } from '@firebase/firestore';
-import { db } from 'src/firebase/config';
 import { sortByDate } from 'utils/sortByDate';
 import Head from 'next/head';
+import { getFirestoreRecords } from 'lib/api';
 
 const filterArtworks = ({ year, category }, artworks) => {
   return artworks.filter((artwork) => {
@@ -148,13 +147,7 @@ const Portfolio = ({ artworks }) => {
 };
 
 export const getStaticProps = async (context) => {
-  const querySnapshot = await getDocs(collection(db, 'artworks'));
-  const artworks = querySnapshot.docs.map((doc) => {
-    return {
-      ...doc.data(),
-      id: doc.id,
-    };
-  });
+  const artworks = await getFirestoreRecords('artworks');
 
   return {
     props: { artworks: sortByDate(artworks) },

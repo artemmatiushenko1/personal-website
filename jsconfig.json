@@ -6,7 +6,9 @@
       "utils/*": ["src/utils/*"],
       "redux/*": ["src/redux/*"],
       "theme/*": ["src/theme/*"],
-      "styles/*": ["src/styles/*"]
+      "styles/*": ["src/styles/*"],
+      "firebase/*": ["src/firebase/*"],
+      "lib/*": ["src/lib/*"]
     }
   }
 }
