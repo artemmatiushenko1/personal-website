@@ -20,7 +20,12 @@ const Contact = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
-          content="If you need to discuss something with a photographer Artem Matiushenko, you can directly contact him using this form or by his email "
+          content="If you need to discuss something with a photographer Artem Matiushenko, you can directly contact him using this form or by his email"
+        />
+        <meta name="twitter:title" content="Contact me - Artem Matiushenko" />
+        <meta
+          name="twitter:description"
+          content="If you need to discuss something with a photographer Artem Matiushenko, you can directly contact him using this form or by his email"
         />
         <title>Contact me - Artem Matiushenko</title>
       </Head>

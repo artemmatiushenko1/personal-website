@@ -60,6 +60,11 @@ const Links = () => {
           property="og:description"
           content="Useful social media links (instagram, twitter, youtube, tiktok), nft, lightroom presets and other resourses by Artem Matiushenko"
         />
+        <meta name="twitter:title" content="Links - Artem Matiushenko" />
+        <meta
+          name="twitter:description"
+          content="Useful social media links (instagram, twitter, youtube, tiktok), nft, lightroom presets and other resourses by Artem Matiushenko"
+        />
         <title>Links - Artem Matiushenko</title>
       </Head>
       <S.Section>

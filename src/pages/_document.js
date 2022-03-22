@@ -37,6 +37,8 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content="#202020" />
           <link rel="apple-touch-icon" href="/logo192.png" />
           <meta property="og:image" content="/website-preview.png" />
+          <meta name="twitter:image" content="/website-preview.png" />
+          <meta name="twitter:card" content="summary_large_image" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"

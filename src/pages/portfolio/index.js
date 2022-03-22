@@ -97,6 +97,11 @@ const Portfolio = ({ artworks }) => {
           property="og:description"
           content={`Gallery of photo artworks created during 2018 and ${new Date().getFullYear()} years by Artem Matiushenko`}
         />
+        <meta name="twitter:title" content="Portfolio - Artem Matiushenko" />
+        <meta
+          name="twitter:description"
+          content={`Gallery of photo artworks created during 2018 and ${new Date().getFullYear()} years by Artem Matiushenko`}
+        />
         <title>Portfolio - Artem Matiushenko</title>
       </Head>
       <S.Section>

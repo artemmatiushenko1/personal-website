@@ -23,6 +23,11 @@ const Nft = ({ nfts }) => {
           property="og:description"
           content="List of sold and available photography NFT's created by Artem Matiushenko"
         />
+        <meta name="twitter:title" content="NFT - Artem Matiushenko" />
+        <meta
+          name="twitter:description"
+          content="List of sold and available photography NFT's created by Artem Matiushenko"
+        />
         <title>NFT - Artem Matiushenko</title>
       </Head>
       <S.Section>

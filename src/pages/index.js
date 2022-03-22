@@ -21,6 +21,12 @@ const Home = () => {
           property="og:description"
           content="Artem Matiushenko - art photographer from Ukraine also known as artemko. Photographer's portfolio 🌻"
         />
+
+        <meta name="twitter:title" content="Artem Matiushenko" />
+        <meta
+          name="twitter:description"
+          content="Artem Matiushenko - art photographer from Ukraine also known as artemko. Photographer's portfolio 🌻"
+        />
         <title>Artem Matiushenko</title>
       </Head>
       <Intro />
