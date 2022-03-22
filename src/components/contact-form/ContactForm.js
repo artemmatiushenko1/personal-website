@@ -8,21 +8,29 @@ import { useState } from 'react';
 
 const ContactForm = () => {
   const [isSending, setIsSending] = useState(false);
-  const { values, handleChange, handleBlur, handleSubmit, errors, touched } =
-    useFormik({
-      initialValues: {
-        fullName: '',
-        email: '',
-        subject: '',
-        message: '',
-      },
-      validationSchema,
-      onSubmit: async (values) => {
-        setIsSending(true);
-        await sendEmail(values);
-        setIsSending(false);
-      },
-    });
+  const {
+    values,
+    handleChange,
+    handleBlur,
+    handleSubmit,
+    errors,
+    touched,
+    resetForm,
+  } = useFormik({
+    initialValues: {
+      fullName: '',
+      email: '',
+      subject: '',
+      message: '',
+    },
+    validationSchema,
+    onSubmit: async (values) => {
+      setIsSending(true);
+      await sendEmail(values);
+      setIsSending(false);
+      resetForm();
+    },
+  });
 
   return (
     <>

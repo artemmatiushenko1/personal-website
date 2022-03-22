@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Masonry from 'react-masonry-css';
 import { rgba } from 'polished';
 import { Section as BaseSection } from 'components/section';
 
