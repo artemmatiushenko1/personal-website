@@ -3,11 +3,13 @@ import Container from 'components/container';
 import { Section as BaseSection } from 'components/section';
 
 export const Section = styled(BaseSection)`
-  padding: 40px 100px 0 60px;
-  height: 100%;
+  padding: 70px 100px 20px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
-    padding: 40px 90px 0 50px;
+    padding: 70px 90px 20px 50px;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
@@ -20,7 +22,7 @@ export const Section = styled(BaseSection)`
     justify-content: space-around;
     align-items: center;
     column-gap: 100px;
-    height: 100%;
+    width: 100%;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
       flex-direction: column;
