@@ -36,9 +36,17 @@ export default class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <meta name="theme-color" content="#202020" />
           <link rel="apple-touch-icon" href="/logo192.png" />
-          <meta property="og:image" content="/website-preview.png" />
-          <meta name="twitter:image" content="/website-preview.png" />
+          <meta
+            property="og:image"
+            content="https://www.artem-matiushenko.com/website-preview.png"
+          />
+          <meta
+            name="twitter:image"
+            content="https://www.artem-matiushenko.com/website-preview.png"
+          />
           <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@_artemko" />
+          <meta name="twitter:creator" content="@_artemko" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
