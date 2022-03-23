@@ -13,12 +13,12 @@ const Layout = ({ children }) => {
   const isMobile = useMediaQuery(`(max-width: ${breakpoints.small})`);
 
   return (
-    <S.App>
+    <>
       <Navigation />
       {!isMobile && pathname !== '/links' && <Socials />}
-      {children}
+      <main>{children}</main>
       {pathname !== '/contact' && <ScrollTopFab />}
-    </S.App>
+    </>
   );
 };
 

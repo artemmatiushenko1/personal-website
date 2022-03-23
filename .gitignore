@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 .next
+sitemap*
+robots.txt
 
 # testing
 /coverage

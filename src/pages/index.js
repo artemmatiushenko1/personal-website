@@ -6,6 +6,7 @@ const Home = () => {
   return (
     <>
       <Head>
+        <link rel="canonical" href="https://www.artem-matiushenko.com" />
         <meta
           name="description"
           content="Artem Matiushenko - art photographer from Ukraine also known as artemko. Photographer's portfolio 🌻"

@@ -28,19 +28,23 @@ const Navigation = () => {
           <HamburgerButton isActive={isNavVisible} onClick={toggleHav} />
         ) : null}
         <S.Nav isVisible={isNavVisible}>
-          <NavLink href="/" onClick={onNavItemSelected}>
+          <NavLink href="/" onClick={onNavItemSelected} title="Home">
             Home
           </NavLink>
-          <NavLink href="/portfolio" onClick={onNavItemSelected}>
+          <NavLink
+            href="/portfolio"
+            onClick={onNavItemSelected}
+            title="Portfolio"
+          >
             Portfolio
           </NavLink>
-          <NavLink href="/nft" onClick={onNavItemSelected}>
+          <NavLink href="/nft" onClick={onNavItemSelected} title="NFT">
             NFT
           </NavLink>
-          <NavLink href="/contact" onClick={onNavItemSelected}>
+          <NavLink href="/contact" onClick={onNavItemSelected} title="Contact">
             Contact
           </NavLink>
-          <NavLink href="/links" onClick={onNavItemSelected}>
+          <NavLink href="/links" onClick={onNavItemSelected} title="Links">
             Links
           </NavLink>
         </S.Nav>

@@ -7,22 +7,22 @@ import * as S from './Socials.style';
 
 const LINKS = [
   {
-    name: 'twitter',
+    name: 'Twitter',
     link: 'https://twitter.com/_artemko',
     icon: <TwitterIcon alt="twitter" />,
   },
   {
-    name: 'instagram',
+    name: 'Instagram',
     link: 'https://www.instagram.com/_artemko/',
     icon: <InstagramIcon />,
   },
   {
-    name: 'tiktok',
+    name: 'TikTok',
     link: 'https://www.tiktok.com/@_artemko',
     icon: <TikTokIcon />,
   },
   {
-    name: 'youtube',
+    name: 'YouTube',
     link: 'https://www.youtube.com/channel/UC0m6XuM0ZWwCA_mFeD2zSKA',
     icon: <YouTubeIcon />,
   },
@@ -32,7 +32,7 @@ const Socials = () => {
   return (
     <S.Wrapper>
       {LINKS.map(({ icon, link, name }) => (
-        <IconButton href={link} icon={icon} key={name} />
+        <IconButton href={link} icon={icon} key={name} title={name} />
       ))}
     </S.Wrapper>
   );

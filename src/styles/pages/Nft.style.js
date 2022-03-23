@@ -6,7 +6,7 @@ export const Section = styled(BaseSection)`
   padding: 90px 20px 20px 20px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
-    padding: 80px 10px 0 10px;
+    padding: 80px 10px 15px 10px;
   }
 
   ${Container} {

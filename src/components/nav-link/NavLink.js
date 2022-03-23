@@ -2,7 +2,7 @@ import * as S from './NavLink.style';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-const NavLink = ({ href, exact = true, onClick, children }) => {
+const NavLink = ({ href, exact = true, onClick, children, title }) => {
   const { pathname } = useRouter();
   const isActive = exact ? pathname === href : pathname.startsWith(href);
 
@@ -12,6 +12,7 @@ const NavLink = ({ href, exact = true, onClick, children }) => {
         onClick={onClick}
         className={isActive ? 'active' : null}
         href={href}
+        title={title}
       >
         {children}
       </S.Button>
