@@ -6,6 +6,7 @@ const Home = () => {
   return (
     <>
       <Head>
+        <title>Artem Matiushenko | Art Photographer</title>
         <link rel="canonical" href="https://www.artem-matiushenko.com" />
         <meta
           name="description"
@@ -15,9 +16,7 @@ const Home = () => {
           name="keywords"
           content="Artem Matiushenko, artemko, Ukraine, photographer, portfolio, artist, артем матюшенко, photo"
         />
-        <meta name="author" content="Artem Matiushenko" />
         <meta property="og:title" content="Artem Matiushenko" />
-        <meta property="og:type" content="website" />
         <meta
           property="og:description"
           content="Artem Matiushenko - art photographer from Ukraine also known as artemko. Photographer's portfolio 🌻"
@@ -28,7 +27,7 @@ const Home = () => {
           name="twitter:description"
           content="Artem Matiushenko - art photographer from Ukraine also known as artemko. Photographer's portfolio 🌻"
         />
-        <title>Artem Matiushenko</title>
+        <meta name="twitter:url" content="https://www.artem-matiushenko.com" />
       </Head>
       <Intro />
       <About />

@@ -8,6 +8,8 @@ const Nft = ({ nfts }) => {
   return (
     <>
       <Head>
+        <title>NFT - Artem Matiushenko</title>
+        <link rel="canonical" href="https://www.artem-matiushenko.com/nft" />
         <meta
           name="description"
           content="List of sold and available photography NFT's created by Artem Matiushenko"
@@ -16,9 +18,7 @@ const Nft = ({ nfts }) => {
           name="keywords"
           content="Artem Matiushenko, artemko, Ukraine, photographer, portfolio, артем матюшенко, nft, links, foundation, artemko.eth"
         />
-        <meta name="author" content="Artem Matiushenko" />
         <meta property="og:title" content="NFT - Artem Matiushenko" />
-        <meta property="og:type" content="website" />
         <meta
           property="og:description"
           content="List of sold and available photography NFT's created by Artem Matiushenko"
@@ -28,7 +28,10 @@ const Nft = ({ nfts }) => {
           name="twitter:description"
           content="List of sold and available photography NFT's created by Artem Matiushenko"
         />
-        <title>NFT - Artem Matiushenko</title>
+        <meta
+          name="twitter:url"
+          content="https://www.artem-matiushenko.com/nft"
+        />
       </Head>
       <S.Section>
         <Container>

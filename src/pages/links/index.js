@@ -45,6 +45,8 @@ const Links = () => {
   return (
     <>
       <Head>
+        <title>Links - Artem Matiushenko</title>
+        <link rel="canonical" href="https://www.artem-matiushenko.com/links" />
         <meta
           name="description"
           content="Useful social media links (instagram, twitter, youtube, tiktok), nft, lightroom presets and other resourses by Artem Matiushenko"
@@ -53,9 +55,7 @@ const Links = () => {
           name="keywords"
           content="Artem Matiushenko, artemko, Ukraine, photographer, portfolio, артем матюшенко, nft, links, social media, presets"
         />
-        <meta name="author" content="Artem Matiushenko" />
         <meta property="og:title" content="Links - Artem Matiushenko" />
-        <meta property="og:type" content="website" />
         <meta
           property="og:description"
           content="Useful social media links (instagram, twitter, youtube, tiktok), nft, lightroom presets and other resourses by Artem Matiushenko"
@@ -65,7 +65,10 @@ const Links = () => {
           name="twitter:description"
           content="Useful social media links (instagram, twitter, youtube, tiktok), nft, lightroom presets and other resourses by Artem Matiushenko"
         />
-        <title>Links - Artem Matiushenko</title>
+        <meta
+          name="twitter:url"
+          content="https://www.artem-matiushenko.com/links"
+        />
       </Head>
       <S.Section>
         <Container>

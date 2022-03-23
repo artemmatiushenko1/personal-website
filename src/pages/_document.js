@@ -33,9 +33,36 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="512x512"
+            href="/android-chrome-512x512.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="/android-chrome-192x192.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+          />
           <meta name="theme-color" content="#202020" />
-          <link rel="apple-touch-icon" href="/logo192.png" />
+          <meta name="author" content="Artem Matiushenko" />
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="Artem Matiushenko" />
           <meta
             property="og:image"
             content="https://www.artem-matiushenko.com/website-preview.png"

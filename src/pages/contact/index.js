@@ -7,6 +7,11 @@ const Contact = () => {
   return (
     <>
       <Head>
+        <title>Contact me - Artem Matiushenko</title>
+        <link
+          rel="canonical"
+          href="https://www.artem-matiushenko.com/contact"
+        />
         <meta
           name="description"
           content="If you need to discuss something with a photographer Artem Matiushenko, you can directly contact him using this form or by his email"
@@ -15,9 +20,7 @@ const Contact = () => {
           name="keywords"
           content="Artem Matiushenko, artemko, Ukraine, photographer, portfolio, артем матюшенко, photo, contact, contact me, email"
         />
-        <meta name="author" content="Artem Matiushenko" />
         <meta property="og:title" content="Contact me - Artem Matiushenko" />
-        <meta property="og:type" content="website" />
         <meta
           property="og:description"
           content="If you need to discuss something with a photographer Artem Matiushenko, you can directly contact him using this form or by his email"
@@ -27,7 +30,10 @@ const Contact = () => {
           name="twitter:description"
           content="If you need to discuss something with a photographer Artem Matiushenko, you can directly contact him using this form or by his email"
         />
-        <title>Contact me - Artem Matiushenko</title>
+        <meta
+          name="twitter:url"
+          content="https://www.artem-matiushenko.com/contact"
+        />
       </Head>
       <S.Section>
         <Container>

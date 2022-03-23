@@ -82,6 +82,11 @@ const Portfolio = ({ artworks }) => {
   return (
     <>
       <Head>
+        <title>Portfolio - Artem Matiushenko</title>
+        <link
+          rel="canonical"
+          href="https://www.artem-matiushenko.com/portfolio"
+        />
         <meta
           name="description"
           content={`Gallery of photo artworks created during 2018 and ${new Date().getFullYear()} years by Artem Matiushenko`}
@@ -90,9 +95,7 @@ const Portfolio = ({ artworks }) => {
           name="keywords"
           content="Artem Matiushenko, artemko, Ukraine, photographer, portfolio, артем матюшенко, artworks, photo, photography, gallery"
         />
-        <meta name="author" content="Artem Matiushenko" />
         <meta property="og:title" content="Portfolio - Artem Matiushenko" />
-        <meta property="og:type" content="website" />
         <meta
           property="og:description"
           content={`Gallery of photo artworks created during 2018 and ${new Date().getFullYear()} years by Artem Matiushenko`}
@@ -102,7 +105,10 @@ const Portfolio = ({ artworks }) => {
           name="twitter:description"
           content={`Gallery of photo artworks created during 2018 and ${new Date().getFullYear()} years by Artem Matiushenko`}
         />
-        <title>Portfolio - Artem Matiushenko</title>
+        <meta
+          name="twitter:url"
+          content="https://www.artem-matiushenko.com/portfolio"
+        />
       </Head>
       <S.Section>
         <Container>
