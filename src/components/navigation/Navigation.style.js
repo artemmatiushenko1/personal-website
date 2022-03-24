@@ -1,7 +1,8 @@
-import styled from 'styled-components';
-import Link from 'next/link';
+import styled, { keyframes } from 'styled-components';
 import LogoSvg from 'public/icons/logo.svg';
 import { rgba } from 'polished';
+import { motion } from 'framer-motion';
+import NavLink from 'components/nav-link/NavLink';
 
 export const Logo = styled(LogoSvg)`
   width: auto;
@@ -36,7 +37,7 @@ export const NavContainer = styled.div`
   }
 `;
 
-export const ActionBar = styled.div`
+export const Header = styled.header`
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
@@ -46,17 +47,105 @@ export const ActionBar = styled.div`
   background-color: ${({ theme }) => theme.palette.primary.main};
 `;
 
-export const Nav = styled.nav`
+export const LinksList = styled.ul`
+  list-style: none;
   display: flex;
   column-gap: 60px;
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    flex-direction: column;
+  }
+`;
+
+const toLeft = keyframes`
+  0%{
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+`;
+
+export const ListItem = styled.li`
+  position: relative;
+  padding: 2px 10px;
+
+  a {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+
+    :link,
+    :visited:not(.active) {
+      color: #fff;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+      color: #202020;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    padding: 10px;
+  }
+
+  &.selected::before {
+    content: '';
+    position: absolute;
+    background-color: ${({ theme }) => rgba(theme.palette.common.white, 1)};
+    transition: all 0.2s ease;
+    width: 100%;
+    height: 2px;
+    right: 0;
+    bottom: -5px;
+    transition: 0.2s;
+    animation: ${toLeft} 0.5s ease;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+      bottom: 0;
+      height: 100%;
+    }
+  }
+
+  ::after {
+    content: '';
+    position: absolute;
+    background-color: ${({ theme }) => theme.palette.common.white};
+    transition: all 0.2s ease;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    transition: all 0.2s ease-in-out;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+      display: none;
+    }
+  }
+
+  :hover:not(.selected) {
+    ::after {
+      width: 100%;
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+        left: -17px;
+        height: 80%;
+        width: 2px;
+      }
+    }
+  }
+`;
+
+export const Nav = styled.nav`
   @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
     position: fixed;
     height: 100vh;
     width: 60vw;
     right: ${({ isVisible }) => (isVisible ? '0' : '-100%')};
     top: 0;
-    flex-direction: column;
     background-color: ${({ theme }) => rgba(theme.palette.primary.main, 0.7)};
     backdrop-filter: blur(20px);
     padding: 30px;

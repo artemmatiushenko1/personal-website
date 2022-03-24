@@ -4,11 +4,22 @@ import { ThemeContext } from 'styled-components';
 import { useContext, useState } from 'react';
 import NavLink from 'components/nav-link/NavLink';
 import useMediaQuery from 'src/hooks/useMediaQuery';
+import { useRouter } from 'next/router';
+
+const routes = [
+  { path: '/', name: 'Home' },
+  { path: '/portfolio', name: 'Portfolio' },
+  { path: '/nft', name: 'Nft' },
+  { path: '/contact', name: 'Contact' },
+  { path: '/links', name: 'Links' },
+];
 
 const Navigation = () => {
   const { breakpoints } = useContext(ThemeContext);
   const isTablet = useMediaQuery(`(max-width: ${breakpoints.medium})`);
   const [isNavVisible, setIsNavVisible] = useState(false);
+  const { pathname } = useRouter();
+  const [selectedPage, setSelectedPage] = useState(pathname);
 
   const toggleHav = () => {
     setIsNavVisible((prevState) => {
@@ -16,40 +27,39 @@ const Navigation = () => {
     });
   };
 
-  const onNavItemSelected = () => {
+  const onNavItemSelected = (path) => {
     setIsNavVisible(false);
+    setSelectedPage(path);
   };
 
   return (
-    <S.ActionBar>
+    <S.Header>
       <S.NavContainer>
-        <S.Logo />
+        <NavLink href="/">
+          <S.Logo />
+        </NavLink>
         {isTablet ? (
           <HamburgerButton isActive={isNavVisible} onClick={toggleHav} />
         ) : null}
         <S.Nav isVisible={isNavVisible}>
-          <NavLink href="/" onClick={onNavItemSelected} title="Home">
-            Home
-          </NavLink>
-          <NavLink
-            href="/portfolio"
-            onClick={onNavItemSelected}
-            title="Portfolio"
-          >
-            Portfolio
-          </NavLink>
-          <NavLink href="/nft" onClick={onNavItemSelected} title="NFT">
-            NFT
-          </NavLink>
-          <NavLink href="/contact" onClick={onNavItemSelected} title="Contact">
-            Contact
-          </NavLink>
-          <NavLink href="/links" onClick={onNavItemSelected} title="Links">
-            Links
-          </NavLink>
+          <S.LinksList>
+            {routes.map(({ path, name }) => (
+              <S.ListItem
+                key={name}
+                className={selectedPage === path ? 'selected' : ''}
+                onClick={() => {
+                  onNavItemSelected(path);
+                }}
+              >
+                <NavLink href={path} title={name}>
+                  {name}
+                </NavLink>
+              </S.ListItem>
+            ))}
+          </S.LinksList>
         </S.Nav>
       </S.NavContainer>
-    </S.ActionBar>
+    </S.Header>
   );
 };
 
