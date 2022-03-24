@@ -6,4 +6,8 @@ export const Footer = styled.footer`
   font-size: 12px;
   text-align: center;
   padding: 70px 30px 40px 30px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    padding: 40px 30px;
+  }
 `;

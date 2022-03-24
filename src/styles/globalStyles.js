@@ -21,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
       height: 100%;
       font-family: Jost;
       font-weight: 400;
+      background-color: #202020;
       color: #fff;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;

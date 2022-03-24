@@ -2,7 +2,6 @@ import Container from 'components/container';
 import * as S from './About.style';
 import ExploreIcon from 'public/icons/icon-compass.svg';
 import { useRouter } from 'next/router';
-import { Footer } from 'components/footer';
 
 const About = () => {
   const router = useRouter();
@@ -54,7 +53,6 @@ const About = () => {
         >
           explore portfolio
         </S.ExploreButton>
-        <Footer />
       </Container>
     </S.Section>
   );
