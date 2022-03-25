@@ -13,7 +13,7 @@ export const Logo = styled(LogoSvg)`
 
 export const NavContainer = styled.div`
   max-width: 1268px;
-  padding: 25px 0px 20px 0px;
+  padding: 20px 0px 20px 0px;
   margin: 0 auto;
   width: 100%;
   display: flex;
@@ -21,7 +21,7 @@ export const NavContainer = styled.div`
   align-items: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
-    padding: 25px 20px 20px 20px;
+    padding: 20px;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
@@ -67,9 +67,10 @@ const toLeft = keyframes`
 
 export const ListItem = styled.li`
   position: relative;
-  padding: 2px 10px;
 
   a {
+    display: inline-block;
+    width: 100%;
     position: relative;
     z-index: 10;
     color: #fff;
@@ -83,11 +84,8 @@ export const ListItem = styled.li`
 
     @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
       color: #202020;
+      padding: 10px;
     }
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
-    padding: 10px;
   }
 
   &.selected::before {
@@ -105,6 +103,7 @@ export const ListItem = styled.li`
     @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
       bottom: 0;
       height: 100%;
+      animation: none;
     }
   }
 
