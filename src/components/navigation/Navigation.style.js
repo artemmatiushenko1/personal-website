@@ -1,8 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import LogoSvg from 'public/icons/logo.svg';
 import { rgba } from 'polished';
-import { motion } from 'framer-motion';
-import NavLink from 'components/nav-link/NavLink';
 
 export const Logo = styled(LogoSvg)`
   width: auto;

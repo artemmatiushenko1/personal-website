@@ -5,6 +5,7 @@ import { useContext, useState } from 'react';
 import NavLink from 'components/nav-link/NavLink';
 import useMediaQuery from 'src/hooks/useMediaQuery';
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 const routes = [
   { path: '/', name: 'Home' },
@@ -20,6 +21,10 @@ const Navigation = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const { pathname } = useRouter();
   const [selectedPage, setSelectedPage] = useState(pathname);
+
+  useEffect(() => {
+    setSelectedPage(pathname);
+  }, [pathname]);
 
   const toggleHav = () => {
     setIsNavVisible((prevState) => {
