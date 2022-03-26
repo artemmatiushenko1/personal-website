@@ -7,6 +7,7 @@ import { ScrollTopFab } from 'components/scroll-top-fab';
 import { useRouter } from 'next/router';
 import useMediaQuery from 'src/hooks/useMediaQuery.js';
 import { Footer } from 'components/footer';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const Layout = ({ children }) => {
   const { pathname } = useRouter();
@@ -17,7 +18,7 @@ const Layout = ({ children }) => {
     <>
       <Navigation />
       {!isMobile && pathname !== '/links' && <Socials />}
-      <main>{children}</main>
+      {children}
       <Footer />
       {pathname !== '/contact' && <ScrollTopFab />}
     </>

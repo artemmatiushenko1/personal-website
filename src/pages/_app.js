@@ -2,8 +2,9 @@ import SimpleReactLightbox from 'simple-react-lightbox';
 import Layout from 'components/layout';
 import Head from 'next/head';
 import ThemeConfig from 'theme/index';
+import { AnimatePresence } from 'framer-motion';
 
-const App = ({ Component, pageProps }) => {
+const App = ({ Component, pageProps, router }) => {
   return (
     <>
       <Head>
@@ -12,7 +13,9 @@ const App = ({ Component, pageProps }) => {
       <ThemeConfig>
         <SimpleReactLightbox>
           <Layout>
-            <Component {...pageProps} />
+            <AnimatePresence exitBeforeEnter>
+              <Component {...pageProps} key={router.pathname} />
+            </AnimatePresence>
           </Layout>
         </SimpleReactLightbox>
       </ThemeConfig>

@@ -7,6 +7,7 @@ import logoFilterGrade from 'public/images/logo-fg.png';
 import logoTwitter from 'public/images/logo-twitter.png';
 import LinkBox from 'components/link-box/LinkBox';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 
 const links = [
   {
@@ -43,7 +44,11 @@ const links = [
 
 const Links = () => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <Head>
         <title>Links - Artem Matiushenko</title>
         <link rel="canonical" href="https://www.artem-matiushenko.com/links" />
@@ -87,7 +92,7 @@ const Links = () => {
           </S.Grid>
         </Container>
       </S.Section>
-    </>
+    </motion.div>
   );
 };
 

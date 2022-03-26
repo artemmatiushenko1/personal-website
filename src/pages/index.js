@@ -1,10 +1,15 @@
 import { Intro } from 'components/intro';
 import { About } from 'components/about';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <Head>
         <title>Artem Matiushenko | Art Photographer</title>
         <link rel="canonical" href="https://www.artem-matiushenko.com" />
@@ -31,7 +36,7 @@ const Home = () => {
       </Head>
       <Intro />
       <About />
-    </>
+    </motion.div>
   );
 };
 

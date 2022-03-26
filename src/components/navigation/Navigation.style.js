@@ -73,18 +73,25 @@ export const ListItem = styled.li`
     width: 100%;
     position: relative;
     z-index: 10;
-    color: #fff;
     text-decoration: none;
-    transition: 0.5s;
 
     :link,
-    :visited:not(.active) {
+    :visited {
       color: #fff;
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
-      color: #202020;
       padding: 10px;
+
+      :link,
+      :visited:not(.active) {
+        color: #fff;
+      }
+
+      .active:link,
+      :visited {
+        color: #202020;
+      }
     }
   }
 

@@ -3,10 +3,15 @@ import Container from 'components/container';
 import { NftCard } from 'components/nft-card';
 import Head from 'next/head';
 import { getFirestoreRecords } from 'lib/api';
+import { motion } from 'framer-motion';
 
 const Nft = ({ nfts }) => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <Head>
         <title>NFT - Artem Matiushenko</title>
         <link rel="canonical" href="https://www.artem-matiushenko.com/nft" />
@@ -63,7 +68,7 @@ const Nft = ({ nfts }) => {
           )}
         </Container>
       </S.Section>
-    </>
+    </motion.div>
   );
 };
 

@@ -8,6 +8,7 @@ import { Select } from 'components/select';
 import { sortByDate } from 'utils/sortByDate';
 import Head from 'next/head';
 import { getFirestoreRecords } from 'lib/api';
+import { motion } from 'framer-motion';
 
 const filterArtworks = ({ year, category }, artworks) => {
   return artworks.filter((artwork) => {
@@ -80,7 +81,11 @@ const Portfolio = ({ artworks }) => {
   };
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <Head>
         <title>Portfolio - Artem Matiushenko</title>
         <link
@@ -143,7 +148,7 @@ const Portfolio = ({ artworks }) => {
           <S.FilterMessage>Nothing was found 🙃</S.FilterMessage>
         ) : null}
       </S.Section>
-    </>
+    </motion.div>
   );
 };
 

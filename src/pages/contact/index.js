@@ -1,11 +1,16 @@
 import { ContactForm } from 'components/contact-form';
 import Container from 'components/container';
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 import * as S from 'src/styles/pages/Contact.style';
 
 const Contact = () => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <Head>
         <title>Contact me - Artem Matiushenko</title>
         <link
@@ -49,7 +54,7 @@ const Contact = () => {
           <ContactForm />
         </Container>
       </S.Section>
-    </>
+    </motion.div>
   );
 };
 
