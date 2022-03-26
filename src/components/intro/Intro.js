@@ -1,7 +1,6 @@
-import personalPicture from 'public/images/personal-picture.png';
-import Container from 'components/container';
 import * as S from './Intro.style';
 import MouseIcon from 'public/icons/icon-mouse.svg';
+import { motion } from 'framer-motion';
 
 const Intro = () => {
   const onMoreButtonClickHandler = () => {
@@ -10,32 +9,39 @@ const Intro = () => {
 
   return (
     <S.Section>
-      <Container>
-        <S.IntroBox>
-          <S.PhotoWrapper>
-            <S.PersonalPhoto
-              src={personalPicture}
-              alt="Artem Matiushenko"
-              quality={100}
-              width={168}
-              height={168}
-            />
-          </S.PhotoWrapper>
-          <S.Title>
-            <span>Artem </span>
-            <span>Matiushenko</span>
-          </S.Title>
-          <S.Description>
-            photographer & digital artist <span>from Ukraine</span>
-          </S.Description>
-          <S.AboutButton
-            icon={<MouseIcon />}
-            onClick={onMoreButtonClickHandler}
-          >
-            ABOUT ME
-          </S.AboutButton>
-        </S.IntroBox>
-      </Container>
+      <S.PhotoWrapper>
+        <motion.img
+          initial={{ x: '-100%', opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          src="/images/home-image.jpg"
+          alt=""
+        />
+      </S.PhotoWrapper>
+      <S.TextWrapper
+        as={motion.div}
+        initial={{ y: '100%', opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <S.Title>
+          <span>Artem </span>
+          <span>Matiushenko</span>
+        </S.Title>
+        <S.Description>
+          photographer & digital artist <span>from Ukraine</span>
+        </S.Description>
+      </S.TextWrapper>
+      <S.ButtonBox
+        initial={{ y: '100%', x: '-50%', opacity: 0 }}
+        animate={{ y: 0, x: '-50%', opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <S.AboutButton
+          icon={<MouseIcon />}
+          onClick={onMoreButtonClickHandler}
+        />
+      </S.ButtonBox>
     </S.Section>
   );
 };

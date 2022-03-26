@@ -6,6 +6,7 @@ import NavLink from 'components/nav-link/NavLink';
 import useMediaQuery from 'src/hooks/useMediaQuery';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const routes = [
   { path: '/', name: 'Home' },
@@ -38,7 +39,12 @@ const Navigation = () => {
   };
 
   return (
-    <S.Header>
+    <S.Header
+      as={motion.header}
+      initial={{ y: '-100%', x: '-50%', opacity: 0 }}
+      animate={{ y: 0, x: '-50%', opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <S.NavContainer>
         <NavLink href="/">
           <S.Logo />

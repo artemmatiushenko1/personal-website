@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   position: fixed;
   top: 50%;
-  right: 45px;
+  left: 45px;
   transform: translateY(-50%);
   row-gap: 15px;
   z-index: 100;

@@ -16,13 +16,13 @@ export const Button = styled.button`
   line-height: 16px;
   transition: transform 0.2s ease;
 
-  :hover {
+  /* :hover {
     transform: translateY(2px);
   }
 
   :active {
     transform: translateY(4px);
-  }
+  } */
 
   svg {
     margin-right: 17px;

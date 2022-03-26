@@ -23,6 +23,7 @@ const GlobalStyles = createGlobalStyle`
       font-weight: 400;
       background-color: #202020;
       color: #fff;
+      overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;

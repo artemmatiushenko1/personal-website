@@ -30,7 +30,6 @@ export const NavContainer = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
-    flex-direction: row-reverse;
     padding: 10px;
   }
 `;
@@ -42,7 +41,6 @@ export const Header = styled.header`
   top: 0;
   z-index: 100;
   width: 100%;
-  background-color: ${({ theme }) => theme.palette.primary.main};
 `;
 
 export const LinksList = styled.ul`
