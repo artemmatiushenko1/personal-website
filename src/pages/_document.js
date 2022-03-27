@@ -65,11 +65,11 @@ export default class MyDocument extends Document {
           <meta property="og:site_name" content="Artem Matiushenko" />
           <meta
             property="og:image"
-            content="https://www.artem-matiushenko.com/website-preview.png"
+            content="https://www.artem-matiushenko.com/website-preview.jpg"
           />
           <meta
             name="twitter:image"
-            content="https://www.artem-matiushenko.com/website-preview.png"
+            content="https://www.artem-matiushenko.com/website-preview.jpg"
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@_artemko" />
