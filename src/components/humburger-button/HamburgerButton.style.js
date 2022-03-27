@@ -11,6 +11,7 @@ export const Box = styled.div`
   justify-content: center;
   cursor: pointer;
   z-index: 100;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
 
   div {
     height: 80%;

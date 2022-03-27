@@ -5,6 +5,7 @@ import { Section as BaseSection } from 'components/section';
 
 export const Section = styled(BaseSection)`
   padding: 95px 0 0 0;
+  min-height: initial;
 
   ${Container} {
     display: flex;
@@ -47,4 +48,9 @@ export const ExploreButton = styled(RoundedButton)`
   svg {
     transition: 0.8s ease;
   }
+`;
+
+export const ButtonBox = styled.div`
+  display: flex;
+  justify-content: center;
 `;

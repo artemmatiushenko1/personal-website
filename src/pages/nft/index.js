@@ -4,13 +4,15 @@ import { NftCard } from 'components/nft-card';
 import Head from 'next/head';
 import { getFirestoreRecords } from 'lib/api';
 import { motion } from 'framer-motion';
+import { pageVariants } from 'styles/animations/pageVariants';
 
 const Nft = ({ nfts }) => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      variants={pageVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
     >
       <Head>
         <title>NFT - Artem Matiushenko</title>

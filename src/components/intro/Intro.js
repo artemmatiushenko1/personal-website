@@ -15,7 +15,7 @@ const Intro = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           src="/images/home-image.jpg"
-          alt=""
+          alt="Artem Matiushenko self portrait inspired by Sweet tooth"
         />
       </S.PhotoWrapper>
       <S.TextWrapper

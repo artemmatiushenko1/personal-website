@@ -8,6 +8,7 @@ import logoTwitter from 'public/images/logo-twitter.png';
 import LinkBox from 'components/link-box/LinkBox';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+import { pageVariants } from 'styles/animations/pageVariants';
 
 const links = [
   {
@@ -45,9 +46,10 @@ const links = [
 const Links = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      variants={pageVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
     >
       <Head>
         <title>Links - Artem Matiushenko</title>

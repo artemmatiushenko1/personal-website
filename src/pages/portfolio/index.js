@@ -9,6 +9,7 @@ import { sortByDate } from 'utils/sortByDate';
 import Head from 'next/head';
 import { getFirestoreRecords } from 'lib/api';
 import { motion } from 'framer-motion';
+import { pageVariants } from 'styles/animations/pageVariants';
 
 const filterArtworks = ({ year, category }, artworks) => {
   return artworks.filter((artwork) => {
@@ -82,9 +83,10 @@ const Portfolio = ({ artworks }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      variants={pageVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
     >
       <Head>
         <title>Portfolio - Artem Matiushenko</title>
@@ -138,7 +140,7 @@ const Portfolio = ({ artworks }) => {
               </S.ButtonResetFilter>
             </S.SelectsWrapper>
             <S.Grid>
-              {filteredArtworks.map(({ imgUrl, id, year, name }) => {
+              {filteredArtworks.map(({ imgUrl, id, year, name }, i) => {
                 return <Photo key={id} src={imgUrl} alt={name} year={year} />;
               })}
             </S.Grid>

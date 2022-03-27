@@ -45,7 +45,7 @@ export const TextWrapper = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
     position: absolute;
-    bottom: 150px;
+    bottom: 175px;
     left: 0;
     width: 100%;
   }
@@ -109,7 +109,7 @@ const float = keyframes`
 
 export const ButtonBox = styled(motion.div)`
   position: absolute;
-  bottom: 25px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
 `;

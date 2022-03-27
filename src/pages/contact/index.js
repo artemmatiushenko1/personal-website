@@ -3,13 +3,15 @@ import Container from 'components/container';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import * as S from 'src/styles/pages/Contact.style';
+import { pageVariants } from 'styles/animations/pageVariants';
 
 const Contact = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      variants={pageVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
     >
       <Head>
         <title>Contact me - Artem Matiushenko</title>

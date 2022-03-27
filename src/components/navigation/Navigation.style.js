@@ -86,9 +86,10 @@ export const ListItem = styled.li`
         color: #fff;
       }
 
-      .active:link,
+      &.active:link,
       :visited {
         color: #202020;
+        background-color: #fff;
       }
     }
   }
@@ -106,9 +107,7 @@ export const ListItem = styled.li`
     animation: ${toLeft} 0.5s ease;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
-      bottom: 0;
-      height: 100%;
-      animation: none;
+      display: none;
     }
   }
 
