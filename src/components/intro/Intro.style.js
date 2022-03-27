@@ -45,7 +45,7 @@ export const TextWrapper = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
     position: absolute;
-    bottom: 175px;
+    bottom: 185px;
     left: 0;
     width: 100%;
   }
@@ -112,6 +112,10 @@ export const ButtonBox = styled(motion.div)`
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    bottom: 80px;
+  }
 `;
 
 export const AboutButton = styled(RoundedButton)`
