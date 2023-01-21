@@ -3,12 +3,16 @@ import * as S from './About.style';
 import ExploreIcon from 'public/icons/icon-compass.svg';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
+import { getAge } from 'utils/getAge';
 
 const About = () => {
   const router = useRouter();
+
   const onExploreButtonClickHandler = () => {
     router.push('/portfolio');
   };
+
+  const age = getAge(process.env.NEXT_PUBLIC_BIRTHDAY_DATE);
 
   return (
     <S.Section id="about">
@@ -20,8 +24,9 @@ const About = () => {
           transition={{ duration: 1 }}
           viewport={{ once: true, amount: 0.01 }}
         >
-          Hi, I am Artem Matiushenko or as most people know me - artemko, 18
-          years old art photographer from a small village in Ukraine.
+          Hi, I am Artem Matiushenko or as most people know me - artemko,
+          {` ${age} `} years old art photographer from a small village in
+          Ukraine.
           <br />
           <br />
           For now, I have been doing photography for about 4 years and I am
