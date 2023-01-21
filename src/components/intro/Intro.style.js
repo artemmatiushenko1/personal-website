@@ -9,6 +9,7 @@ export const Section = styled(BaseSection)`
   height: 100vh;
   display: flex;
   position: relative;
+  overflow: hidden;
 
   ${Container} {
     height: 100%;
