@@ -31,11 +31,9 @@ const Fab = () => {
   }, []);
 
   return (
-    <>
-      <S.Box onClick={scrollToTop} className={!ableScrollTop ? 'hidden' : null}>
-        <S.ArrowIcon />
-      </S.Box>
-    </>
+    <S.Box onClick={scrollToTop} className={!ableScrollTop ? 'hidden' : null}>
+      <S.ArrowIcon />
+    </S.Box>
   );
 };
 

@@ -10,6 +10,11 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { pageVariants } from 'styles/animations/pageVariants';
 
+const metadata = {
+  description:
+    'Useful social media links (instagram, twitter, youtube, tiktok), nft, lightroom presets and other resourses by Artem Matiushenko',
+};
+
 const links = [
   {
     img: logoFoundation,
@@ -54,24 +59,15 @@ const Links = () => {
       <Head>
         <title>Links - Artem Matiushenko</title>
         <link rel="canonical" href="https://www.artem-matiushenko.com/links" />
-        <meta
-          name="description"
-          content="Useful social media links (instagram, twitter, youtube, tiktok), nft, lightroom presets and other resourses by Artem Matiushenko"
-        />
+        <meta name="description" content={metadata.description} />
         <meta
           name="keywords"
           content="Artem Matiushenko, artemko, Ukraine, photographer, portfolio, артем матюшенко, nft, links, social media, presets"
         />
         <meta property="og:title" content="Links - Artem Matiushenko" />
-        <meta
-          property="og:description"
-          content="Useful social media links (instagram, twitter, youtube, tiktok), nft, lightroom presets and other resourses by Artem Matiushenko"
-        />
+        <meta property="og:description" content={metadata.description} />
         <meta name="twitter:title" content="Links - Artem Matiushenko" />
-        <meta
-          name="twitter:description"
-          content="Useful social media links (instagram, twitter, youtube, tiktok), nft, lightroom presets and other resourses by Artem Matiushenko"
-        />
+        <meta name="twitter:description" content={metadata.description} />
         <meta
           name="twitter:url"
           content="https://www.artem-matiushenko.com/links"
