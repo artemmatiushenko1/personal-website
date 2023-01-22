@@ -5,7 +5,7 @@
   "dependencies": {
     "firebase": "^9.6.8",
     "formik": "^2.2.9",
-    "framer-motion": "^6.2.8",
+    "framer-motion": "^6.5.1",
     "next": "latest",
     "next-compose-plugins": "^2.2.1",
     "nodemailer": "^6.9.0",

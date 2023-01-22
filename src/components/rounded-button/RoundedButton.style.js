@@ -11,22 +11,23 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   padding: 11.5px 23px;
-  cursor: pointer;
   font-size: 14px;
   line-height: 16px;
-  transition: transform 0.2s ease;
-
-  /* :hover {
-    transform: translateY(2px);
-  }
-
-  :active {
-    transform: translateY(4px);
-  } */
+  transition: transform 0.2s ease opacity 0.2s ease;
 
   svg {
     margin-right: 17px;
     width: 24px;
     height: auto;
+  }
+
+  &:not([disabled]) {
+    cursor: pointer;
+  }
+
+  &[disabled] {
+    opacity: 0.9;
+    color: ${({ theme }) => theme.palette.gray['500']};
+    stroke: ${({ theme }) => theme.palette.gray['500']};
   }
 `;

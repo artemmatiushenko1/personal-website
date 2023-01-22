@@ -23,21 +23,8 @@ export const SendButton = styled(RoundedButton)`
   flex-direction: row-reverse;
   padding-top: 10px;
   padding-bottom: 10px;
-
-  div {
-    transition: 0.5s;
-  }
-
-  &.pressed {
-    div {
-      transform: translateX(50%);
-    }
-
-    svg {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-  }
+  text-align: center;
+  transition: color 0.2s ease, background-color 0.2s ease, stroke 0.2s ease;
 
   svg {
     width: 18px;
@@ -45,7 +32,12 @@ export const SendButton = styled(RoundedButton)`
     opacity: 1;
     margin-right: 0;
     margin-left: 17px;
-    transition: 0.2s;
+  }
+
+  :hover:not([disabled]) {
+    background-color: ${({ theme }) => theme.palette.primary.main};
+    color: ${({ theme }) => theme.palette.common.white};
+    stroke: ${({ theme }) => theme.palette.common.white};
   }
 `;
 
