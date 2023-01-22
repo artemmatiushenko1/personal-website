@@ -5,25 +5,16 @@ import { SRLWrapper } from 'simple-react-lightbox';
 import { Photo } from 'components/photo';
 import RestoreIcon from 'public/icons/icon-restore.svg';
 import { Select } from 'components/select';
-import { sortByDate } from 'utils/sortByDate';
 import Head from 'next/head';
 import { getFirestoreRecords } from 'lib/api';
 import { motion } from 'framer-motion';
 import { pageVariants } from 'styles/animations/pageVariants';
+import { filterArtworks, sortByDate } from 'src/utils';
 
-const filterArtworks = ({ year, category }, artworks) => {
-  return artworks.filter((artwork) => {
-    if (year && !category) {
-      return artwork.year === year;
-    }
-    if (!year && category) {
-      return artwork.categories.includes(category);
-    }
-    if (year && category) {
-      return artwork.categories.includes(category) && artwork.year === year;
-    }
-    return artworks;
-  });
+const currentYear = new Date().getFullYear();
+
+const metadata = {
+  description: `Gallery of photo artworks created during 2018 and ${currentYear} years by Artem Matiushenko`,
 };
 
 const SRLOptions = {
@@ -94,24 +85,15 @@ const Portfolio = ({ artworks }) => {
           rel="canonical"
           href="https://www.artem-matiushenko.com/portfolio"
         />
-        <meta
-          name="description"
-          content={`Gallery of photo artworks created during 2018 and ${new Date().getFullYear()} years by Artem Matiushenko`}
-        />
+        <meta name="description" content={metadata.description} />
         <meta
           name="keywords"
           content="Artem Matiushenko, artemko, Ukraine, photographer, portfolio, артем матюшенко, artworks, photo, photography, gallery"
         />
         <meta property="og:title" content="Portfolio - Artem Matiushenko" />
-        <meta
-          property="og:description"
-          content={`Gallery of photo artworks created during 2018 and ${new Date().getFullYear()} years by Artem Matiushenko`}
-        />
+        <meta property="og:description" content={metadata.description} />
         <meta name="twitter:title" content="Portfolio - Artem Matiushenko" />
-        <meta
-          name="twitter:description"
-          content={`Gallery of photo artworks created during 2018 and ${new Date().getFullYear()} years by Artem Matiushenko`}
-        />
+        <meta name="twitter:description" content={metadata.description} />
         <meta
           name="twitter:url"
           content="https://www.artem-matiushenko.com/portfolio"

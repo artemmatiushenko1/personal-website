@@ -6,6 +6,11 @@ import { getFirestoreRecords } from 'lib/api';
 import { motion } from 'framer-motion';
 import { pageVariants } from 'styles/animations/pageVariants';
 
+const metadata = {
+  description:
+    "List of sold and available photography NFT's created by Artem Matiushenko",
+};
+
 const Nft = ({ nfts }) => {
   return (
     <motion.div
@@ -17,24 +22,15 @@ const Nft = ({ nfts }) => {
       <Head>
         <title>NFT - Artem Matiushenko</title>
         <link rel="canonical" href="https://www.artem-matiushenko.com/nft" />
-        <meta
-          name="description"
-          content="List of sold and available photography NFT's created by Artem Matiushenko"
-        />
+        <meta name="description" content={metadata.description} />
         <meta
           name="keywords"
           content="Artem Matiushenko, artemko, Ukraine, photographer, portfolio, артем матюшенко, nft, links, foundation, artemko.eth"
         />
         <meta property="og:title" content="NFT - Artem Matiushenko" />
-        <meta
-          property="og:description"
-          content="List of sold and available photography NFT's created by Artem Matiushenko"
-        />
+        <meta property="og:description" content={metadata.description} />
         <meta name="twitter:title" content="NFT - Artem Matiushenko" />
-        <meta
-          name="twitter:description"
-          content="List of sold and available photography NFT's created by Artem Matiushenko"
-        />
+        <meta name="twitter:description" content={metadata.description} />
         <meta
           name="twitter:url"
           content="https://www.artem-matiushenko.com/nft"

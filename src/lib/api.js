@@ -1,6 +1,5 @@
 import { getDocs, collection } from '@firebase/firestore';
-import { db } from 'firebase/config';
-import emailjs from '@emailjs/browser';
+import { db } from '../config/firebase';
 
 export const getFirestoreRecords = async (collectionName) => {
   try {
@@ -18,14 +17,17 @@ export const getFirestoreRecords = async (collectionName) => {
   }
 };
 
-export const sendEmail = async (emailTeamplate) => {
+export const sendEmail = async (emailData) => {
   try {
-    await emailjs.send(
-      process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID,
-      process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID,
-      emailTeamplate,
-      process.env.NEXT_PUBLIC_EMAIL_JS_USER_ID
-    );
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(emailData),
+    });
+
+    const { sent } = await res.json();
+
+    return sent;
   } catch (err) {
     return err.message;
   }

@@ -1,13 +1,11 @@
 import Navigation from 'components/navigation/Navigation.js';
 import { Socials } from 'components/socials';
-import * as S from './index.style.js';
 import { ThemeContext } from 'styled-components';
 import { useContext } from 'react';
 import { ScrollTopFab } from 'components/scroll-top-fab';
 import { useRouter } from 'next/router';
 import useMediaQuery from 'src/hooks/useMediaQuery.js';
 import { Footer } from 'components/footer';
-import { AnimatePresence, motion } from 'framer-motion';
 
 const Layout = ({ children }) => {
   const { pathname } = useRouter();

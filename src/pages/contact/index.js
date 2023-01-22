@@ -5,6 +5,11 @@ import Head from 'next/head';
 import * as S from 'src/styles/pages/Contact.style';
 import { pageVariants } from 'styles/animations/pageVariants';
 
+const metadata = {
+  description:
+    'If you need to discuss something with a photographer Artem Matiushenko, you can directly contact him using this form or by his email',
+};
+
 const Contact = () => {
   return (
     <motion.div
@@ -19,24 +24,15 @@ const Contact = () => {
           rel="canonical"
           href="https://www.artem-matiushenko.com/contact"
         />
-        <meta
-          name="description"
-          content="If you need to discuss something with a photographer Artem Matiushenko, you can directly contact him using this form or by his email"
-        />
+        <meta name="description" content={metadata.description} />
         <meta
           name="keywords"
           content="Artem Matiushenko, artemko, Ukraine, photographer, portfolio, артем матюшенко, photo, contact, contact me, email"
         />
         <meta property="og:title" content="Contact me - Artem Matiushenko" />
-        <meta
-          property="og:description"
-          content="If you need to discuss something with a photographer Artem Matiushenko, you can directly contact him using this form or by his email"
-        />
+        <meta property="og:description" content={metadata.description} />
         <meta name="twitter:title" content="Contact me - Artem Matiushenko" />
-        <meta
-          name="twitter:description"
-          content="If you need to discuss something with a photographer Artem Matiushenko, you can directly contact him using this form or by his email"
-        />
+        <meta name="twitter:description" content={metadata.description} />
         <meta
           name="twitter:url"
           content="https://www.artem-matiushenko.com/contact"

@@ -10,6 +10,9 @@ const palette = {
   error: {
     main: '#d35400',
   },
+  gray: {
+    500: '#c2c2c2',
+  },
 };
 
 export default palette;
